@@ -58,13 +58,14 @@
     /* ===== HEADER / HERO REDESIGN ===== */
     #header {
       position: relative;
-      height: 100vh;
-      min-height: 600px;
+      min-height: 100vh;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       overflow: hidden;
+      padding: 100px 0 60px;
     }
     #header::before {
       content: '';
@@ -200,33 +201,39 @@
 
     /* Scroll Down */
     .scroll-down {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
+      display: inline-block;
+      margin-top: 30px;
       animation: bounce 2s infinite;
       color: rgba(255,255,255,0.5);
       font-size: 1.5rem;
       cursor: pointer;
       transition: color 0.3s;
+      text-decoration: none;
     }
     .scroll-down:hover { color: #12D640; }
     @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-      40% { transform: translateX(-50%) translateY(-10px); }
-      60% { transform: translateX(-50%) translateY(-5px); }
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
     }
 
-    /* ===== NAVBAR - MODERN STICKY ===== */
+    /* ===== NAVBAR - SMART STICKY ===== */
     .nav-menu {
-      position: fixed;
+      position: absolute;
       top: 0; left: 0; right: 0;
+      background: transparent;
+      z-index: 999;
+      padding: 15px 0;
+      transition: all 0.4s ease;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav-menu.scrolled {
+      position: fixed;
       background: rgba(11, 26, 42, 0.95);
       backdrop-filter: blur(10px);
-      z-index: 999;
-      padding: 12px 0;
-      transition: all 0.3s ease;
       border-bottom: 1px solid rgba(18, 214, 64, 0.1);
+      padding: 10px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
     .nav-menu ul {
       display: flex;
@@ -270,7 +277,7 @@
       display: none;
       position: fixed;
       top: 15px; right: 15px;
-      z-index: 1000;
+      z-index: 1001;
       background: rgba(18, 214, 64, 0.2);
       border: 1px solid #12D640;
       color: #12D640;
@@ -1510,6 +1517,26 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Navbar Scroll Detection -->
+  <script>
+    (function() {
+      var nav = document.querySelector('.nav-menu');
+      var header = document.getElementById('header');
+
+      function updateNav() {
+        var headerBottom = header.getBoundingClientRect().bottom;
+        if (headerBottom <= 0) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', updateNav, { passive: true });
+      updateNav(); // Check on load
+    })();
+  </script>
 
 </body>
 </html>
