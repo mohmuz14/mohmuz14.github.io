@@ -55,27 +55,25 @@
     }
     * { box-sizing: border-box; }
 
-    /* ===== HERO SECTION (HOME ONLY) ===== */
-    .hero-section {
+    /* ===== HEADER / HERO REDESIGN ===== */
+    #header {
       position: relative;
-      min-height: 100vh;
-      height: auto;
+      height: 100vh;
+      min-height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      padding: 120px 0 60px;
-      background: #0b1a2a;
     }
-    .hero-section::before {
+    #header::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: radial-gradient(ellipse at center, rgba(18, 214, 64, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
-    .hero-section .container {
+    #header .container {
       position: relative;
       z-index: 2;
       display: flex;
@@ -202,23 +200,24 @@
 
     /* Scroll Down */
     .scroll-down {
-      display: inline-block;
-      margin-top: 30px;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
       animation: bounce 2s infinite;
       color: rgba(255,255,255,0.5);
       font-size: 1.5rem;
       cursor: pointer;
       transition: color 0.3s;
-      text-decoration: none;
     }
     .scroll-down:hover { color: #12D640; }
     @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-10px); }
-      60% { transform: translateY(-5px); }
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
     }
 
-    /* ===== NAVBAR - ALWAYS FIXED ===== */
+    /* ===== NAVBAR - MODERN STICKY ===== */
     .nav-menu {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -271,7 +270,7 @@
       display: none;
       position: fixed;
       top: 15px; right: 15px;
-      z-index: 1001;
+      z-index: 1000;
       background: rgba(18, 214, 64, 0.2);
       border: 1px solid #12D640;
       color: #12D640;
@@ -744,7 +743,7 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="nav-menu">
     <ul>
-      <li class="active"><a href="#home"><span>Home</span></a></li>
+      <li class="active"><a href="#header"><span>Home</span></a></li>
       <li><a href="#about"><span>About</span></a></li>
       <li><a href="#experience"><span>Experience</span></a></li>
       <li><a href="#education"><span>Education</span></a></li>
@@ -756,8 +755,8 @@
     </ul>
   </nav>
 
-  <!-- ===== HERO SECTION (HOME ONLY) ===== -->
-  <section id="home" class="hero-section">
+  <!-- ===== HERO / HEADER ===== -->
+  <header id="header">
     <div class="container">
       <div class="hero-avatar">
         <img src="assets/img/education/ss.jpeg" alt="Mohammed Muzeeb Shaik">
@@ -781,10 +780,10 @@
         <a href="mailto:mohmuzsha786@gmail.com" target="_blank" title="Email"><i class="bx bx-envelope"></i></a>
         <a href="https://drive.google.com/file/d/1D0wuCDzIJnJ270-_fMvfMUHLN3ZBeyUO/view?usp=drive_link" target="_blank" title="Download CV"><i class="bx bx-download"></i></a>
       </div>
-      <a href="#about" class="scroll-down"><i class="bx bx-chevron-down"></i></a>
     </div>
-  </section>
-  <!-- End Hero Section -->
+    <a href="#about" class="scroll-down"><i class="bx bx-chevron-down"></i></a>
+  </header>
+  <!-- End Header -->
 
   <!-- ===== ABOUT SECTION ===== -->
   <section id="about" class="about">
@@ -1511,36 +1510,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Active Nav Highlighting -->
-  <script>
-    (function() {
-      var sections = document.querySelectorAll('section[id]');
-      var navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-
-      function highlightNav() {
-        var scrollPos = window.scrollY + 100;
-
-        sections.forEach(function(section) {
-          var top = section.offsetTop;
-          var height = section.offsetHeight;
-          var id = section.getAttribute('id');
-
-          if (scrollPos >= top && scrollPos < top + height) {
-            navLinks.forEach(function(link) {
-              link.parentElement.classList.remove('active');
-              if (link.getAttribute('href') === '#' + id) {
-                link.parentElement.classList.add('active');
-              }
-            });
-          }
-        });
-      }
-
-      window.addEventListener('scroll', highlightNav, { passive: true });
-      highlightNav();
-    })();
-  </script>
 
 </body>
 </html>
