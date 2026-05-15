@@ -279,24 +279,197 @@
       cursor: pointer;
     }
 
-    /* ===== SECTIONS ===== */
-    section { padding: 80px 0; position: relative; }
-    .section-title h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      position: relative;
-      display: inline-block;
-    }
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: -8px; left: 0;
-      width: 50px; height: 3px;
-      background: #12D640;
-      border-radius: 2px;
-    }
-    .section-title { text-align: left; padding-bottom: 30px; }
+    /* ===== FULLSCREEN NO-SCROLL SECTIONS ===== */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+/* Every section fills screen */
+section,
+header {
+  width: 100%;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  max-height: 100vh !important;
+
+  overflow: hidden !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 75px 20px 20px 20px !important;
+  position: relative;
+}
+
+/* Section container */
+section .container,
+header .container {
+  width: 100%;
+  max-width: 1450px;
+  height: 100%;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Compact titles */
+.section-title {
+  padding-bottom: 10px !important;
+}
+
+.section-title h2 {
+  font-size: 1.7rem !important;
+  margin-bottom: 4px !important;
+}
+
+/* Compact layouts */
+.about-content p,
+.experience-card ul li,
+.project-card .project-info p,
+.skill-category p,
+.achievement-card ul li {
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Reduce overall card spacing */
+.project-grid,
+.cert-grid,
+.skills-grid,
+.edu-grid,
+.expertise-grid {
+  gap: 12px !important;
+}
+
+/* Smaller cards */
+.project-card,
+.cert-card,
+.skill-category,
+.edu-card,
+.experience-card,
+.achievement-card,
+.contact-card {
+  transform: scale(0.92);
+  margin-bottom: 8px !important;
+}
+
+/* Smaller project images */
+.project-card .project-img {
+  height: 120px !important;
+}
+
+/* Smaller certification images */
+.cert-card img {
+  height: 100px !important;
+}
+
+/* Smaller education images */
+.edu-card img {
+  height: 90px !important;
+}
+
+/* Compact experience cards */
+.experience-card {
+  padding: 16px !important;
+}
+
+.experience-card ul li {
+  margin-bottom: 3px !important;
+}
+
+/* Compact skill logos */
+.skill-category img {
+  max-height: 30px !important;
+}
+
+/* Compact expertise cards */
+.expertise-card {
+  padding: 15px 10px !important;
+}
+
+.expertise-card i {
+  font-size: 1.6rem !important;
+}
+
+.expertise-card h3 {
+  font-size: 0.8rem !important;
+}
+
+/* Compact nav */
+.nav-menu {
+  padding: 6px 0 !important;
+}
+
+.nav-menu li a {
+  padding: 6px 10px !important;
+  font-size: 0.78rem !important;
+}
+
+/* Remove sticky image */
+.about-image-wrapper {
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better grid fit */
+.project-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.cert-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.edu-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.expertise-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+
+  html, body {
+    overflow-y: auto !important;
+  }
+
+  section,
+  header {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .project-grid,
+  .cert-grid,
+  .edu-grid,
+  .skills-grid,
+  .expertise-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
 
     /* ===== ABOUT GRID ===== */
     .about-grid {
