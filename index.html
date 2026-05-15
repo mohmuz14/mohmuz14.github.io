@@ -9,13 +9,28 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5BB8W2X');</script>
   <!-- End Google Tag Manager -->
+
   <link rel="icon" type="image/png" href="/favicon.png"/>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Shaik Mohammed Muzeeb</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+  <!-- SEO & Social Meta -->
+  <title>Mohammed Muzeeb Shaik | AI Engineer & GenAI Specialist</title>
+  <meta name="description" content="AI Engineer with hands-on experience deploying production-ready intelligent systems using LLMs, NLP, RAG, and Azure AI. Specialized in GenAI, Agentic AI, and cloud-native AI solutions.">
+  <meta name="keywords" content="AI Engineer, GenAI, LLM, RAG, LangChain, Azure AI, Machine Learning, NLP, Python, Bangalore">
+  <meta name="author" content="Mohammed Muzeeb Shaik">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohammed Muzeeb Shaik | AI Engineer & GenAI Specialist">
+  <meta property="og:description" content="AI Engineer deploying production-ready LLM systems, RAG pipelines, and Azure AI solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mohmuz14.github.io/">
+  <meta property="og:image" content="https://mohmuz14.github.io/assets/img/education/ss.jpeg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohammed Muzeeb Shaik | AI Engineer">
+  <meta name="twitter:description" content="AI Engineer | GenAI | LLMs | Azure AI | RAG">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -96,6 +111,145 @@
       width: 100%;
     }
 
+    /* ===== Experience Timeline Styling ===== */
+    .experience-card {
+      background: rgba(255,255,255,0.03);
+      border-left: 4px solid #12D640;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+    }
+    .experience-card:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateX(5px);
+    }
+    .experience-card h4 a {
+      color: #87CEEB;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    .experience-card h5 {
+      color: #12D640;
+      font-size: 0.95rem;
+      margin: 8px 0;
+    }
+    .experience-card ul {
+      padding-left: 20px;
+      margin-top: 12px;
+    }
+    .experience-card ul li {
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    /* ===== Project Cards Enhancement ===== */
+    .portfolio-item {
+      margin-bottom: 30px;
+    }
+    .portfolio-item h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tech-badge {
+      display: inline-block;
+      background: rgba(18, 214, 64, 0.15);
+      color: #12D640;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      margin: 2px;
+      border: 1px solid rgba(18, 214, 64, 0.3);
+    }
+
+    /* ===== Skills Section Enhancement ===== */
+    .skills-category {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .skills-category h4 {
+      color: #09203a;
+      font-weight: 700;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #12D640;
+      padding-bottom: 8px;
+      display: inline-block;
+    }
+    .skills-category p {
+      margin-bottom: 0;
+    }
+    .skills-category img {
+      margin: 5px 8px 5px 0;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    /* ===== Certification Grid ===== */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .cert-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+    .cert-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .cert-card .cert-info {
+      padding: 15px;
+    }
+    .cert-card .cert-info h4 {
+      color: #09203a;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .cert-card .cert-info p {
+      color: #666;
+      font-size: 0.85rem;
+      margin-bottom: 0;
+    }
+
+    /* ===== Achievement Cards ===== */
+    .achievement-card {
+      background: linear-gradient(135deg, #ffffff 0%, #e8f5ff 100%);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
+      border-left: 6px solid #00bfa6;
+      margin-bottom: 20px;
+    }
+    .achievement-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    }
+    .achievement-card.purple {
+      border-left-color: #9c27b0;
+      background: linear-gradient(135deg, #ffffff 0%, #f9f2ff 100%);
+    }
+    .achievement-card.gold {
+      border-left-color: #ffc107;
+      background: linear-gradient(135deg, #ffffff 0%, #fff8e1 100%);
+    }
+
     /* ===== Responsive Fix: Center on Small Screens ===== */
     @media (max-width: 768px) {
       #header.header-tops {
@@ -111,6 +265,24 @@
       #header .social-links {
         text-align: center !important;
       }
+      .experience-card {
+        padding: 18px;
+      }
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Scrollbar Styling ===== */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b1a2a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #12D640;
+      border-radius: 4px;
     }
   </style>
 
@@ -122,158 +294,248 @@
     gtag('js', new Date());
     gtag('config', 'UA-169007209-3');
   </script>
-
-  <!-- =======================================================
-  * Template Name: Personal - v2.1.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+<base target="_blank">
 </head>
 
 <body>
-  
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  
+
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
-
     <div class="container">
-
-      <h1><a href="index.html">Mohammed Muzeeb</a></h1>
+      <h1><a href="index.html">Mohammed Muzeeb Shaik</a></h1>
       <h2 style="color:#fff">I'm <span class="typing" style="color:#12D640"></span></h2>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#header"> <span>Home</span></a></li>
+          <li class="active"><a href="#header"><span>Home</span></a></li>
           <li><a href="#about"><span>About</span></a></li>
-          <li><a href="#education"> <span>Education</span></a></li>
-          <li><a href="#experience"> <span>Experience</span></a></li>
-          <!-- <li><a href="#projects"> <span>Projects</span></a></li> -->
-          <li><a href="#portfolio"> <span>Projects</span></a></li>
-          <li><a href="#skills"> <span>Skills</span></a></li>
-          <li><a href="#achievements"> <span>Achievements</span></a></li>
-          <li><a href="https://drive.google.com/file/d/1gG5FvP-RBPPki7SHfk4DoMQkNZlRToAn/view?usp=sharing" target="_blank"> <span>CV</span></a></li>
-          <!-- <li><a href="#links"> <span>CV & Links</span></a></li> -->
-          <li><a href="#contacts"> <span>Contact</span></a></li>
+          <li><a href="#experience"><span>Experience</span></a></li>
+          <li><a href="#education"><span>Education</span></a></li>
+          <li><a href="#portfolio"><span>Projects</span></a></li>
+          <li><a href="#skills"><span>Skills</span></a></li>
+          <li><a href="#achievements"><span>Achievements</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1gG5FvP-RBPPki7SHfk4DoMQkNZlRToAn/view?usp=sharing" target="_blank"><span>CV</span></a></li>
+          <li><a href="#contacts"><span>Contact</span></a></li>
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
 
       <div class="social-links">
-          <a href="https://www.linkedin.com/in/mohmuz14/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/mohmuz14" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="mailto:mohmuzsha786@gmail.com" target="_blank" class="email">
-            <i class="bx bx-envelope"></i>
-          </a>
+        <a href="https://www.linkedin.com/in/mohmuz14/" target="_blank" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/mohmuz14" target="_blank" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="mailto:mohmuzsha786@gmail.com" target="_blank" class="email" title="Email"><i class="bx bx-envelope"></i></a>
+        <a href="https://drive.google.com/file/d/1gG5FvP-RBPPki7SHfk4DoMQkNZlRToAn/view?usp=sharing" target="_blank" class="cv" title="Download CV" style="margin-left: 8px;"><i class="bx bx-download"></i></a>
       </div>
-
     </div>
-  </header><!-- End Header -->
-
-</body>
-</html>
+  </header>
+  <!-- End Header -->
 
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
-
-    <!-- ======= About Me ======= -->
+    <!-- About Me -->
     <div class="about-me container">
-
       <div class="section-title">
         <h2>About</h2>
       </div>
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/education/ss.jpeg" class="img-fluid" alt="my image">
+          <img src="assets/img/education/ss.jpeg" class="img-fluid" alt="Mohammed Muzeeb Shaik - AI Engineer" style="border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <p>I am an enthusiastic, determined, and ambitious individual ready to embark on a professional career in the domain of AI. Data Scientist with a strong foundation in statistical modeling, machine learning, and natural language processing. Proven ability to deliver end-to-end data solutions, from translating ambiguous business questions into analytical frameworks to deploying production-ready models. Expertise includes implementing data-driven systems like LLM-powered chatbots, performing in-depth exploratory data analysis (EDA), and building predictive models. Proficient in Python, SQL, Power BI, and cloud platforms (AWS, GCP), with a consistent track record of creating actionable insights and automated decision-making tools that drive strategic outcomes. An adept leader in cross-functional, agile environments, focused on the continuous optimization of data products.
+          <p style="font-size: 1.05rem; line-height: 1.8;">
+            <strong>AI Engineer</strong> with hands-on experience deploying production-ready intelligent systems using <strong>LLMs, NLP, RAG, and modern AI infrastructure</strong>. Specialized in the <strong>Microsoft Azure ecosystem</strong> (AI Foundry, Copilot Studio) with proven ability to transition complex POCs to production within tight timelines.
           </p>
-          <div class="row">
+          <p style="font-size: 1.05rem; line-height: 1.8;">
+            Currently at <strong>Zensar Technology</strong>, I architect and deliver GenAI applications for <strong>NFU Mutual</strong> — focusing on claims quality assessment, risk analysis automation, and Data COE enablement. Previously built an <strong>LLM-powered chatbot for Air Asia Ikhlas</strong> using MCP orchestration, LangChain memory, and Redis caching — delivered to production during a 3-month internship alongside my Master's.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8;">
+            Expert in <strong>RAG pipelines, agentic frameworks (LangGraph), LLM fine-tuning (LoRA/QLoRA)</strong>, and cloud-native AI deployment. Skilled in MLOps, DevOps practices, and building secure, impactful enterprise AI solutions.
+          </p>
+          <div class="row mt-3">
             <div class="col-lg-6">
               <ul>
-               <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> Valentines Day </li>
-               <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +91 7019013117</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Role:</strong> AI / ML Engineer</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> <a href="tel:+917019013117" style="color: inherit;">+91 7019013117</a></li>
               </ul>
             </div>
             <div class="col-lg-6">
               <ul>
                 <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Bangalore, India</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> mohmuzsha786@gmail.com</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> <a href="mailto:mohmuzsha786@gmail.com" style="color: inherit;">mohmuzsha786@gmail.com</a></li>
               </ul>
             </div>
           </div>
+          <div class="mt-3">
+            <a href="https://drive.google.com/file/d/1gG5FvP-RBPPki7SHfk4DoMQkNZlRToAn/view?usp=sharing" target="_blank" class="btn" style="background: #12D640; color: #fff; padding: 10px 25px; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block; margin-right: 10px;">
+              <i class="bx bx-download"></i> Download CV
+            </a>
+            <a href="https://www.linkedin.com/in/mohmuz14/" target="_blank" class="btn" style="background: transparent; color: #12D640; border: 2px solid #12D640; padding: 10px 25px; border-radius: 25px; font-weight: 600; text-decoration: none; display: inline-block;">
+              <i class="bx bxl-linkedin"></i> LinkedIn
+            </a>
+          </div>
         </div>
       </div>
+    </div>
+    <!-- End About Me -->
 
-    </div><!-- End About Me -->
-
-    <!-- ======= Interests ======= -->
+    <!-- Interests -->
     <div class="interests container">
-
       <div class="section-title">
-        <h2>Interests</h2>
+        <h2>Areas of Expertise</h2>
       </div>
 
       <div class="row">
         <div class="col-lg-3 col-md-4">
           <div class="icon-box">
-            <i class="ri-global-line" style="color: #ffbb2c;"></i>
-            <h3>Data Science</h3>
+            <i class="ri-brain-line" style="color: #ffbb2c;"></i>
+            <h3>Generative AI</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #5578ff;"></i>
-            <h3>Machine Learning</h3>
+            <i class="ri-robot-line" style="color: #5578ff;"></i>
+            <h3>Agentic AI</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-camera-3-line" style="color: #e80368;"></i>
-            <h3>Artificial Intelligence</h3>
+            <i class="ri-database-2-line" style="color: #e80368;"></i>
+            <h3>RAG & Vector DBs</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
           <div class="icon-box">
-            <i class="ri-english-input" style="color: #1c7d32;"></i>
-            <h3>Agentic AI</h3>
+            <i class="ri-cloud-line" style="color: #1c7d32;"></i>
+            <h3>Azure AI & Cloud</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-code-s-slash-fill" style="color: #28a745;"></i>
-            <h3>Data Engineering</h3>
+            <h3>LLM Fine-Tuning</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-bar-chart-box-line" style="color: #f1081f;"></i>
-            <h3>Cloud & Big Data</h3>
+            <h3>MLOps & DevOps</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-file-list-3-line" style="color: #47aeff;"></i>
-            <h3>Software Development</h3>
+            <h3>NLP & Chatbots</h3>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-image-line" style="color: #ffc107;"></i>
-            <h3>Data Visualization</h3>
+            <i class="ri-shield-check-line" style="color: #ffc107;"></i>
+            <h3>Enterprise AI Security</h3>
           </div>
         </div>
       </div>
+    </div>
+    <!-- End Interests -->
+  </section>
+  <!-- End About Section -->
 
-    </div><!-- End Interests -->
-  </section><!-- End About Section -->
+  <!-- ======= Experience Section ======= -->
+  <section id="experience" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experience</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
 
+          <!-- Zensar -->
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+            <h4 style="text-align:left;"><a href="https://www.zensar.com/" target="_blank" style="color:#87CEEB">Zensar Technology</a></h4>
+            <h5 style="text-align:left;">January 2026 – Present | Bangalore, India</h5>
+            <p style="text-align:left;color:#fff"><em>Technical Specialist – AI / ML Engineer</em></p>
+            <ul style="text-align:left;">
+              <li>Built an <strong>end-to-end AI-powered Intelligent Document Processing (IDP)</strong> system automating invoice extraction, validation, and analytics from unstructured PDFs using <strong>OCR + LLM + rule-based intelligence</strong>. Reduced manual invoice processing effort by <strong>~80%</strong>.</li>
+              <li>Designed a <strong>modular, production-style document processing pipeline</strong> with decoupled OCR, LLM parsing, validation, and export layers ensuring scalability, observability, and fault tolerance.</li>
+              <li>Engineered <strong>intelligent data automation workflows</strong> for NFU Mutual's Risk division and IT operations using <strong>n8n</strong>, streamlining internal processes across the Azure ecosystem.</li>
+              <li><strong>Architected and led GenAI proofs-of-concept</strong> for NFU Mutual focusing on claims quality assessment and Data COE enablement — successfully transitioned solutions from concept to <strong>production within 3 months</strong> on Microsoft Azure AI.</li>
+            </ul>
+            <div style="margin-top: 12px;">
+              <span class="tech-badge">Azure AI Foundry</span>
+              <span class="tech-badge">Copilot Studio</span>
+              <span class="tech-badge">LLMs</span>
+              <span class="tech-badge">OCR</span>
+              <span class="tech-badge">n8n</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">FastAPI</span>
+            </div>
+          </div>
 
+          <!-- Air Asia -->
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="150">
+            <h4 style="text-align:left;"><a href="https://www.airasia.com/" target="_blank" style="color:#87CEEB">Air Asia Ikhlas</a></h4>
+            <h5 style="text-align:left;">May 2025 – July 2025 | Kuala Lumpur, Malaysia</h5>
+            <p style="text-align:left;color:#fff"><em>Data Scientist (Internship)</em></p>
+            <ul style="text-align:left;">
+              <li>Spearheaded the design and deployment of a <strong>production-ready LLM-powered chatbot</strong> using the <strong>Model Context Protocol (MCP)</strong> and <strong>LangChain memory</strong> — delivered within a 3-month internship while concurrently pursuing a Master's.</li>
+              <li>Integrated <strong>Google Gemini LLM</strong> with JSON function calling for dynamic query execution and built multi-locale support (English & Malay) with persona-aware prompts.</li>
+              <li>Implemented <strong>LangGraph for multi-step workflow orchestration</strong> and Redis caching with automatic background cache prewarming for latency optimization.</li>
+              <li>Developed a <strong>Next.js frontend with SSE streaming</strong>, typing indicators, and session debug tools. Conducted full QA and stress tests (30+ sessions) with fallback + hallucination filters.</li>
+            </ul>
+            <div style="margin-top: 12px;">
+              <span class="tech-badge">MCP</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">LangGraph</span>
+              <span class="tech-badge">Gemini</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">GraphQL</span>
+              <span class="tech-badge">Next.js</span>
+            </div>
+          </div>
+
+          <!-- Aurigo -->
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+            <h4 style="text-align:left;"><a href="https://www.aurigo.com/" target="_blank" style="color:#87CEEB">Aurigo Software</a></h4>
+            <h5 style="text-align:left;">December 2018 – September 2024 | Bangalore, India</h5>
+            <p style="text-align:left;color:#fff"><em>Senior Software Engineer</em></p>
+            <ul style="text-align:left;">
+              <li>Led a <strong>cross-functional team</strong> in collaboration with Product Development to incorporate AI and automation into core product offerings, managing the full ML lifecycle from problem framing to deployment.</li>
+              <li>Demonstrated expertise in <strong>Exploratory Data Analysis (EDA), Data Wrangling, and Machine Learning</strong>, delivering data-driven insights that optimized business processes and improved model performance across multiple domains.</li>
+              <li>Led a team of test engineers ensuring tasks were completed on time, even during extended hours, to meet critical project deadlines.</li>
+            </ul>
+            <div style="margin-top: 12px;">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">ML</span>
+              <span class="tech-badge">EDA</span>
+              <span class="tech-badge">Team Leadership</span>
+              <span class="tech-badge">Agile</span>
+            </div>
+          </div>
+
+          <!-- DXC -->
+          <div class="experience-card" data-aos="fade-up" data-aos-delay="250">
+            <h4 style="text-align:left;"><a href="https://www.dxc.com/" target="_blank" style="color:#87CEEB">DXC Technology</a></h4>
+            <h5 style="text-align:left;">September 2018 – December 2018 | Bangalore, India</h5>
+            <p style="text-align:left;color:#fff"><em>Graduate Development Programme</em></p>
+            <ul style="text-align:left;">
+              <li>Completed intensive training in <strong>Agile Product Lifecycle</strong> along with modern development practices and software engineering fundamentals.</li>
+            </ul>
+            <div style="margin-top: 12px;">
+              <span class="tech-badge">Agile</span>
+              <span class="tech-badge">SDLC</span>
+              <span class="tech-badge">STLC</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Experience Section -->
 
   <!-- ======= Education Section ======= -->
   <section id="education" class="services">
@@ -284,270 +546,253 @@
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up" style="display: inline-block;">
 
-
-                                     
-            <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block; ">
-              <img src="assets/img/education/um.jpg" class="img-fluid" alt="">
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>Masters in Data Science </em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">October 2024 - October 2025</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">Graduated with Distinction, CGPA-3.98 .</h6>
-            </div>
-          
-          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block; ">
-              <img src="assets/img/education/nmit.jpg" class="img-fluid" alt="">
-              <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>Bachelors in Electronics & Comunication Engineering</em></p>
-              <h5 style="text-align:left;padding: 0px 10px;">August 2014 - April 2018</h5>
-              <h6 style="text-align:left;color:#fff;padding: 0px 10px;">8.63 CGPA</h6>
-            </div>
           <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/kv.jpeg" class="img-fluid" alt="">
-              <h4 style="text-align:left;color:#fff;padding: 5px 10px;"><em>Kendriya Vidyalaya</em></h4>
-              <h6 style="text-align:left;padding: 0px 10px;">2014</h6>
-              <h5 style="text-align:left;color:#fff;padding: 0px 10px;">85.80 %</h5>
+            <img src="assets/img/education/um.jpg" class="img-fluid" alt="University of Malaya" style="border-radius: 8px;">
+            <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>Masters in Data Science</em></p>
+            <h5 style="text-align:left;padding: 0px 10px;">October 2024 – October 2025</h5>
+            <h6 style="text-align:left;color:#fff;padding: 0px 10px;"><strong>Distinction, CGPA 3.98/4.00</strong></h6>
           </div>
-           <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
-              <img src="assets/img/education/kv.jpeg" class="img-fluid" alt="">
-              <h4 style="text-align:left;color:#fff;padding: 5px 10px;"><em>Kendriya Vidyalaya</em></>
-              <h6 style="text-align:left;padding: 0px 10px;">2012</h6>
-              <h5 style="text-align:left;color:#fff;padding: 0px 10px;">10 CGPA</h5>
-            </div>
+
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="150" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
+            <img src="assets/img/education/nmit.jpg" class="img-fluid" alt="NMIT Bangalore" style="border-radius: 8px;">
+            <p style="text-align:left;color:#fff;padding: 5px 10px;"><em>Bachelors in Electronics & Communication Engineering</em></p>
+            <h5 style="text-align:left;padding: 0px 10px;">August 2014 – April 2018</h5>
+            <h6 style="text-align:left;color:#fff;padding: 0px 10px;"><strong>CGPA 8.63/10.00</strong></h6>
           </div>
+
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="200" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
+            <img src="assets/img/education/kv.jpeg" class="img-fluid" alt="Kendriya Vidyalaya" style="border-radius: 8px;">
+            <h4 style="text-align:left;color:#fff;padding: 5px 10px;"><em>Kendriya Vidyalaya</em></h4>
+            <h6 style="text-align:left;padding: 0px 10px;">Senior Secondary (2014)</h6>
+            <h5 style="text-align:left;color:#fff;padding: 0px 10px;"><strong>85.80%</strong></h5>
+          </div>
+
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="250" style="padding:0px 0px;padding-bottom: 5px;display: inline-block;">
+            <img src="assets/img/education/kv.jpeg" class="img-fluid" alt="Kendriya Vidyalaya" style="border-radius: 8px;">
+            <h4 style="text-align:left;color:#fff;padding: 5px 10px;"><em>Kendriya Vidyalaya</em></h4>
+            <h6 style="text-align:left;padding: 0px 10px;">Secondary (2012)</h6>
+            <h5 style="text-align:left;color:#fff;padding: 0px 10px;"><strong>10 CGPA</strong></h5>
+          </div>
+
         </div>
-      </div>
-
-
-    <div class="portfolio">
-    <div class="container">
-      <div class="section-title">
-        <h2>Certification & Recommendation</h2>
-      </div>
-
- <div class="row portfolio-container" style="position: relative; height: auto;">
-   
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/gcp.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Certified in Google Cloud</h4>
-            </div>
-           </div>
-          </div>
-          
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/py.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Certified in Python</h4>
-            </div>
-           </div>
-          </div>
-          
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/sql.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Certified in SQL</h4>
-            </div>
-           </div>
-          </div>
-          
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/br.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Bravo Award(We Culture)</h4>
-            </div>
-           </div>
-          </div>
-          
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/spot.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Spot Award(Ownership)</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/bravo.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Bravo Award(Beyond COD)</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/ikhlas.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Air Asia Certificate</h4>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/Masters.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Masters Degree Certificate</h4>
-            </div>
-          </div>
-        </div>
-</div>
-</div>
-<!-- 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 0px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/ibm.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Deep Learning with Tensorflow</h4>
-              <div class="portfolio-links">
-                <a href="https://drive.google.com/file/d/1FSwPt19EzY_tpvqkE6igtLf3gccKcssC/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 370px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/robu.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Machine Learning with Python</h4>
-              <div class="portfolio-links">
-                <a href="https://drive.google.com/file/d/1gimySw_NPzCJ54dqZ2j2wYyz-JDOg-S0/view?usp=sharing" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>  -->
-
-
-        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-project" style="position: absolute; left: 740px; top: 218.875px;">
-          <div class="portfolio-wrap">
-            <img src="assets/img/certification/dai.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Neural Networks and Deep Learning</h4>
-              <div class="portfolio-links">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/ELXZ6FE2BU7X?utm_medium=certificate&amp;utm_source=link&amp;utm_campaign=copybutton_certificate/" target="_blank" title="Certificate"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
       </div>
     </div>
-    </div>
-
   </section>
   <!-- End Education Section -->
 
-
-
-  <!-- Start Experience Section -->
-
-  <section id="experience" class="services">
+  <!-- ======= Certifications Section ======= -->
+  <section id="certifications" class="services" style="background: #0b1a2a;">
     <div class="container">
       <div class="section-title">
-        <h2>Experience</h2>
+        <h2>Certifications & Awards</h2>
       </div>
-      <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.asu.edu/" style="color:#87CEEB">Air Asia (Ikhlas)</a><br> </h4>
-                <h5 style="text-align:left;">2025 (May - July)</h5>
-                <p style="text-align:left;color:#fff"><em>Data Scientist (Internship) </em></p>
-                <ul style="text-align:left;">
-                  <li> Designed and implemented a modular production ready chatbot system using the Model
- Context Protocol (MCP) pattern with plugin-based tool orchestration.</li>
-    <li>Integrated Google Gemini LLM with JSON function calling for dynamic query execution.</li>
-    <li>Implemented LangChain memory and LangGraph for contextual query handling, follow-up
- references, and multi-step workflow orchestration.</li>
- <li>Built multi-locale support (English & Malay) and persona-aware prompts using template
- formatting.</li>
-  <li>Created full flow: prompt → Gemini → tool call → GraphQL API → enriched reply → frontend.</li>
-  <li>Developed a Next.js frontend with SSE streaming, typing indicators, and session debug tools.</li>
-  <li>Optimized latency via Redis caching, batch fetches, and automatic background cache
- prewarming.</li>
- <li>Conducted full QA tests, stress tests (30+ sessions), and integrated fallback + hallucination
- filters.</li>
-</ul>
-</ul>
-                </ul>
-              </div>
-              <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.augmenify.com/" style="color:#87CEEB">Aurigo Software</a><br> </h4>
-                <h5 style="text-align:left;">2018 - 2024</h5>
-                <p style="text-align:left;color:#fff"><em>Senior Software Engineer / Data Analyst</em></p>
-                <ul style="text-align:left;">
-                  <li> Expertise in Exploratory Data Analysis (EDA), Data Wrangling, and Machine Learning.</li>
-                    <li>Ability to disambiguate loosely defined business and product problems and create a
-                roadmap for analysis and experimentation facilitating informed insights and strategic
-                decision-making.</li>
-                    <li>Led a team of test engineers, ensuring tasks were completed on time, even during
-                extended hours, to meet project deadlines</li>
-                </ul>
 
-              </div>
-              <!-- <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.epitomesolutions.in/" style="color:#12d640">Epitome Corporation Pvt. Ltd.</a><br> </h4>
-                <h5 style="text-align:left;">July 2019 - Dec 2019</h5>
-                <p style="text-align:left;color:#fff"><em>Software Developer</em></p>
-                <ul style="text-align:left;">
-                  <li>Tested, designed, and developed backend APIs of WebRTC enabled multi‑party video conferencing web application and delivered the project 15 days ahead of schedule by efficiently designing the flow of the project.</li>
-                </ul>
-              </div> -->
-              <!-- <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.meditab.com/" target="_blank" style="color:#12d640">Meditab Software Pvt. Ltd.</a><br> </h4>
-                <h5 style="text-align:left;">May 2018 - June 2018</h5>
-                <p style="text-align:left;color:#fff"><em>Programmer Analyst</em></p>
-                <ul style="text-align:left;">
-                  <li>Optimized image processing algorithm of pill detection by creating customized MASKRCNN  algorithm, increasing accuracy by 15%; trained classification algorithm with the help of triplet loss to learn the image embedding of pill, reducing the hassle of collecting data of new pills. </li>
-                  <li>Devised a pipeline of the project to incorporate it into the product of the company. Implemented Restful APIs in Django that enabled our quality Analyst team to increase reporting speed by 46%.</li>
-                  <li>Built a web app to onboard data from the company’s product using Flask, Postgres, and AWS S3, enabling interactive charts in real-time.</li>
-                  <li>Mentored 2 interns to optimize the pill detection algorithm and to include the multiprocessing pipeline, increasing overall speed by 75%.</li>
-                </ul>
-              </div> -->
-              <!-- <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <h4 style="text-align:left;"><a href="https://www.sac.gov.in/Vyom/index.jsp" target="_blank" style="color:#12d640">Space Application Centre, ISRO</a><br> </h4>
-                <h5 style="text-align:left;">Jan 2018 - May 2018</h5>
-                <p style="text-align:left;color:#fff"><em>Research Intern</em></p>
-                <ul style="text-align:left;">
-                  <li>Implemented noise reduction algorithm on the satellite image and prepared architecture for detecting objects in high‑resolution satellite images, achieving 80% accuracy.</li>
-                  <li>Increased accessibility of satellite image data by redesigning database and application for showcasing graphical data.</li>
-                </ul>
-            </div> -->
+      <div class="cert-grid">
+
+        <div class="cert-card" data-aos="fade-up">
+          <img src="assets/img/certification/gcp.jpg" alt="Google Cloud Data Analytics">
+          <div class="cert-info">
+            <h4>Google Cloud Data Analytics</h4>
+            <p>Google Cloud Career Launchpad | Jan 2025</p>
           </div>
         </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
+          <img src="assets/img/certification/azure.jpg" alt="Microsoft Azure Fundamentals" onerror="this.src='assets/img/certification/gcp.jpg'">
+          <div class="cert-info">
+            <h4>Microsoft Certified: Azure Fundamentals</h4>
+            <p>Microsoft | 2024</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/certification/aws.jpg" alt="AWS Generative AI Practitioner" onerror="this.src='assets/img/certification/gcp.jpg'">
+          <div class="cert-info">
+            <h4>AWS Cloud Quest: Generative AI Practitioner</h4>
+            <p>Amazon Web Services | 2024</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
+          <img src="assets/img/certification/py.jpg" alt="Python Data Structures">
+          <div class="cert-info">
+            <h4>Python Data Structures</h4>
+            <p>University of Michigan (Coursera) | Jan 2024</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/certification/sql.jpg" alt="SQL Intermediate">
+          <div class="cert-info">
+            <h4>SQL (Intermediate)</h4>
+            <p>HackerRank | Sep 2023</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="250">
+          <img src="assets/img/certification/br.jpg" alt="Bravo Award">
+          <div class="cert-info">
+            <h4>Bravo Award – We Culture</h4>
+            <p>Aurigo Software | Excellence in Quality Assurance</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/certification/spot.jpg" alt="Spot Award">
+          <div class="cert-info">
+            <h4>Spot Award – Ownership</h4>
+            <p>Aurigo Software | Key Values Implementation</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="350">
+          <img src="assets/img/certification/bravo.jpg" alt="Bravo Award Beyond COD">
+          <div class="cert-info">
+            <h4>Bravo Award – Beyond COD</h4>
+            <p>Aurigo Software | 20% Reduction in Post-Release Defects</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="assets/img/certification/ikhlas.jpg" alt="Air Asia Certificate">
+          <div class="cert-info">
+            <h4>Air Asia Ikhlas – Internship</h4>
+            <p>Kuala Lumpur, Malaysia | LLM Chatbot Production Deployment</p>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="450">
+          <img src="assets/img/certification/Masters.jpg" alt="Masters Degree Certificate">
+          <div class="cert-info">
+            <h4>Masters Degree Certificate</h4>
+            <p>University of Malaya | Distinction, CGPA 3.98</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
+  <!-- End Certifications Section -->
 
-  <!-- End Experience Section -->
-
-
-
-  <!-- Start Project Section -->
+  <!-- ======= Project Section ======= -->
   <section id="portfolio" class="portfolio">
     <div class="container">
-
       <div class="section-title">
         <h2>Projects</h2>
       </div>
 
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
-
+          <p style="color: #b0bec5; margin-bottom: 30px;">Production-grade AI systems, GenAI applications, and data engineering solutions</p>
         </div>
       </div>
 
       <div class="row portfolio-container">
+
+        <!-- IDP System -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <center><h4>AI-Powered IDP System</h4></center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/idp.png" class="img-fluid" alt="Intelligent Document Processing" style="width:300px; height:200px; object-fit: cover;" onerror="this.src='assets/img/project/aiag.png'">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <h4>Intelligent Document Processing</h4>
+                <p style="color:#ccc; font-size:0.85rem;">OCR + LLM + Rule-based validation for invoice automation</p>
+                <a href="projects/idp.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center; margin-top:8px;">
+            <span class="tech-badge">Azure AI</span>
+            <span class="tech-badge">LLM</span>
+            <span class="tech-badge">OCR</span>
+            <span class="tech-badge">Python</span>
+          </div>
+        </div>
+
+        <!-- NFU Mutual AI Agent -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <center><h4>NFU Mutual AI Agent</h4></center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/nfu.png" class="img-fluid" alt="NFU Mutual AI Agent" style="width:300px; height:200px; object-fit: cover;" onerror="this.src='assets/img/project/aiag.png'">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <h4>Claims Quality Assessment Agent</h4>
+                <p style="color:#ccc; font-size:0.85rem;">n8n workflows + Azure AI for insurance automation</p>
+                <a href="projects/nfu.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center; margin-top:8px;">
+            <span class="tech-badge">n8n</span>
+            <span class="tech-badge">Azure</span>
+            <span class="tech-badge">GenAI</span>
+            <span class="tech-badge">Copilot Studio</span>
+          </div>
+        </div>
+
+        <!-- Air Asia Chatbot -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <center><h4>Air Asia Ikhlas Chatbot</h4></center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/chatbot.png" class="img-fluid" alt="Air Asia Chatbot" style="width:300px; height:200px; object-fit: cover;">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <h4>LLM-Powered Production Chatbot</h4>
+                <p style="color:#ccc; font-size:0.85rem;">MCP + LangChain + Gemini + Redis + Next.js</p>
+                <a href="projects/airasia.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center; margin-top:8px;">
+            <span class="tech-badge">MCP</span>
+            <span class="tech-badge">LangChain</span>
+            <span class="tech-badge">Gemini</span>
+            <span class="tech-badge">Redis</span>
+          </div>
+        </div>
+
+        <!-- Wellness Chatbot -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
+          <center><h4>Wellness Chatbot with RAG</h4></center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/wellness.png" class="img-fluid" alt="Wellness Chatbot" style="width:300px; height:200px; object-fit: cover;" onerror="this.src='assets/img/project/chatbot.png'">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <h4>LLM Powered Wellness Chatbot</h4>
+                <p style="color:#ccc; font-size:0.85rem;">Personalized recommendations with RAG &amp; gamification</p>
+                <a href="projects/gan.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center; margin-top:8px;">
+            <span class="tech-badge">RAG</span>
+            <span class="tech-badge">LLM</span>
+            <span class="tech-badge">Streamlit</span>
+            <span class="tech-badge">FAISS</span>
+          </div>
+        </div>
+
+        <!-- Sustainable AI Agent -->
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <center><h4>Sustainable AI Agent</h4></center>
+          <div class="portfolio-wrap">
+            <img src="assets/img/project/aiag.png" class="img-fluid" alt="Sustainable AI Agent" style="width:300px; height:200px; object-fit: cover;">
+            <div class="portfolio-info">
+              <div class="portfolio-links">
+                <h4>Sustainable AI Agent</h4>
+                <a href="projects/ns%20copy%202.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Movie Recommendation -->
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4>Movie Recommendation</h4></center>
           <div class="portfolio-wrap">
-            
-            <img src="assets/img/project/movier.png" class="img-fluid" alt="" style="width:300px; height:200px;">
+            <img src="assets/img/project/movier.png" class="img-fluid" alt="Movie Recommendation" style="width:300px; height:200px; object-fit: cover;">
             <div class="portfolio-info">
-              
               <div class="portfolio-links">
                 <h4>Movie Recommendation</h4>
                 <a href="projects/ns.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -555,41 +800,27 @@
             </div>
           </div>
         </div>
+
+        <!-- Health Risks -->
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>HEALTH RISKS PREDICTION </h4></center>
+          <center><h4>Health Risks Prediction</h4></center>
           <div class="portfolio-wrap">
-            
-            <img src="assets/img/project/mental.png" class="img-fluid" alt="" style="width:300px; height:200px;">
+            <img src="assets/img/project/mental.png" class="img-fluid" alt="Health Risks Prediction" style="width:300px; height:200px; object-fit: cover;">
             <div class="portfolio-info">
-              
               <div class="portfolio-links">
-                <h4>HEALTH RISKS PREDICTION</h4>
-                <a href="projects/ns copy.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
+                <h4>Health Risks Prediction</h4>
+                <a href="projects/ns%20copy.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Sustainable AI Agent</h4></center>
-          <div class="portfolio-wrap">
-            
-            <img src="assets/img/project/aiag.png" class="img-fluid" alt="" style="width:300px; height:200px;">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <h4>Sustainable AI Agent</h4>
-                <a href="projects/ns copy 2.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <!-- Customer Churn -->
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <center><h4>Customer Churn Analysis</h4></center>
           <div class="portfolio-wrap">
-            
-            <img src="assets/img/project/churn.png" class="img-fluid" alt="" style="width:300px; height:200px;">
+            <img src="assets/img/project/churn.png" class="img-fluid" alt="Customer Churn Analysis" style="width:300px; height:200px; object-fit: cover;">
             <div class="portfolio-info">
-              
               <div class="portfolio-links">
                 <h4>Customer Churn Analysis</h4>
                 <a href="projects/discord.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -598,13 +829,13 @@
           </div>
         </div>
 
+        <!-- Taiwan AQI -->
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Taiwan AQI Analysis </h4></center>
+          <center><h4>Taiwan AQI Analysis</h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/taiwan.png" class="img-fluid" alt=""style="width:300px; height:200px;">
+            <img src="assets/img/project/taiwan.png" class="img-fluid" alt="Taiwan AQI Analysis" style="width:300px; height:200px; object-fit: cover;">
             <div class="portfolio-info">
               <h4>Taiwan AQI Analysis</h4>
-              
               <div class="portfolio-links">
                 <a href="projects/doctor.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
@@ -612,31 +843,15 @@
           </div>
         </div>
 
+        <!-- Hotel Booking -->
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <center><h4>Analyzing Hotel Booking </h4></center>
+          <center><h4>Analyzing Hotel Booking</h4></center>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/hotel.png" class="img-fluid" alt=""style="width:300px; height:200px;">
+            <img src="assets/img/project/hotel.png" class="img-fluid" alt="Hotel Booking Analysis" style="width:300px; height:200px; object-fit: cover;">
             <div class="portfolio-info">
-              
               <div class="portfolio-links">
-                <h4>Analyzing Hotel Booking </h4>
-
+                <h4>Analyzing Hotel Booking</h4>
                 <a href="projects/dbms.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-          
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-project">
-          <!-- <br> -->
-          <center><h4>LLM Powered Wellness Chatbot with Personalized Recommendations</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/chatbot.png" class="img-fluid" alt=""style="width:300px; height:200px;">
-            <div class="portfolio-info">
-              <h4>LLM Powered Wellness Chatbot with Personalized Recommendations</h4>
-              <div class="portfolio-links">
-                <a href="projects/gan.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
               </div>
             </div>
           </div>
@@ -645,243 +860,206 @@
       </div>
     </div>
   </section>
-
   <!-- End Project Section -->
 
-
-
-<!-- Start Skills Section -->
-
-<section id="skills" class="services">
-  <div class="container">
-    <div class="section-title">
-      <h2>Skills</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-12" data-aos="fade-up">
-
-        <!-- Programming Languages & Databases -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Programming Languages & Databases</h4>
-          <p style="text-align:left;">
-            <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="Python" title="Python — Programming language" height="50" width="150">
-            <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java" title="Java — Programming language" height="50" width="120">
-            <img src="https://www.vectorlogo.zone/logos/r-project/r-project-official.svg" alt="R" title="R — Statistical programming" height="50" width="100">
-            <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-ar21.svg" alt="SQL" title="SQL — Query language / Databases" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-ar21.svg" alt="Apache Spark" title="Apache Spark — Distributed data processing" height="60" width="130">
-          </p>
-        </div>
-
-        <!-- Data Engineering & Big Data -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="150" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Data Engineering & Big Data</h4>
-          <p style="text-align:left;">
-            <img src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-ar21.svg" alt="Hadoop" title="Hadoop — Big data storage & processing" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/apache_hive/apache_hive-ar21.svg" alt="Hive" title="Hive — Data warehouse on Hadoop" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/databricks/databricks-ar21.svg" alt="Databricks" title="Databricks — Unified data analytics" height="60" width="120">
-            
-          </p>
-        </div>
-
-        <!-- Cloud Platforms -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="200" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Cloud Platforms</h4>
-          <p style="text-align:left;">
-            <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS" title="AWS — Cloud platform" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg" alt="Azure" title="Azure — Cloud platform" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="GCP" title="GCP — Cloud platform" height="60" width="120">
-          </p>
-        </div>
-
-        <!-- Machine Learning & AI Frameworks -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="250" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Machine Learning & AI Frameworks</h4>
-          <p style="text-align:left;">
-            <!-- scikit-learn reliable Wikimedia link -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" title="Scikit-learn — ML library (regression, classification, clustering)" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="TensorFlow" title="TensorFlow — Deep learning framework" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="PyTorch" title="PyTorch — Deep learning framework" height="60" width="120">
-            <img src="https://cdn.worldvectorlogo.com/logos/huggingface-2.svg" alt="HuggingFace" title="HuggingFace — Transformers & model hub" height="60" width="120">
-          </p>
-        </div>
-
-        <!-- Advanced AI & LLM Technologies -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="300" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Advanced AI & LLM Technologies</h4>
-          <p style="text-align:left;">
-            <!-- LangChain (Wikimedia) -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/LangChain_Logo.svg" alt="LangChain" title="LangChain — LLM orchestration & chains" height="60" width="140">
-            <!-- Pinecone (Wikimedia) -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Pinecone-Full-Logo-Black.svg" alt="Pinecone" title="Pinecone — Vector database (embeddings/ANN)" height="60" width="140">
-            <img src="https://img.shields.io/badge/FAISS-005C84?style=for-the-badge&logo=facebook&logoColor=white" 
-     alt="FAISS" 
-     title="FAISS — Similarity search & vector indexing" 
-     height="60">
-           </p>
-        </div>
-
-        <!-- DevOps, Automation & Infra -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="350" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">DevOps, Automation & Infrastructure</h4>
-          <p style="text-align:left;">
-            <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" title="Docker — Containerization" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg" alt="Kubernetes" title="Kubernetes — Container orchestration" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg" alt="Jenkins" title="Jenkins — CI/CD automation" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/redis/redis-ar21.svg" alt="Redis" title="Redis — Caching & fast data store" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="Git" title="Git — Version control" height="60" width="120">
-          </p>
-        </div>
-
-        <!-- Data Visualization -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="400" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Data Visualization</h4>
-          <p style="text-align:left;">
-            <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-ar21.svg" alt="Power BI" title="Power BI — Data visualization & dashboards" height="60" width="120">
-            <!-- Tableau reliable Wikimedia PNG -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau" height="60" width="140">
-
-
-          </p>
-        </div>
-
-        <!-- APIs & Orchestration -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="450" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">APIs & Orchestration</h4>
-          <p style="text-align:left;">
-            <img src="https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg" alt="GraphQL" title="GraphQL — API query language" height="60" width="120">
-            <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" 
-     alt="Postman" 
-     title="Postman — API testing & development" 
-     height="60" width="60">
-            
-            <img src="https://www.vectorlogo.zone/logos/hasuraio/hasuraio-ar21.svg" alt="Hasura" title="Hasura — GraphQL engine & orchestration" height="60" width="120">
-          </p>
-        </div>
-
-        <!-- QA & Automation Testing -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="500" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Automation & QA</h4>
-          <p style="text-align:left;">
-           <img src="https://selenium.dev/images/selenium_logo_square_green.png" 
-     alt="Selenium" 
-     title="Selenium — Browser automation & testing" 
-     height="60" width="60">
-
-
-            <!-- Swagger/OpenAPI (API testing) -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png" alt="API Testing" title="Swagger / OpenAPI — API design & testing" height="60" width="120">
-          </p>
-        </div>
-
-        <!-- Soft Skills -->
-        <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="550" style="background:#fff">
-          <h4 style="text-align:left;color:#09203a">Soft Skills</h4>
-          <p style="text-align:left; font-weight:bold; color:#09203a;">
-            Communication • Analytical Thinking • Strategic Planning • Attention to Detail • Stakeholder Engagement • Team Leadership • Agile Collaboration • Fast Learning
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- End Skills Section -->
-
-
-
-
-<!-- pub -->
-<section id="achievements" class="services" style="background: #0b1a2a; color: white; padding: 60px 0;">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2 style="color: #00bfa6; font-weight: 700; font-size: 2rem;"> Achievements </h2>
-      <p style="color: #b0bec5;">A showcase of my professional contributions</p>
-    </div>
-
-    <div class="row justify-content-center">
-      
-      <!-- Publication Card 1 -->
-      <div class="col-lg-10 mb-4" data-aos="fade-up">
-        <div class="publication-card" 
-             style="background: linear-gradient(135deg, #ffffff 0%, #e8f5ff 100%);
-                    border-radius: 16px; padding: 25px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-                    transition: all 0.4s ease; border-left: 6px solid #00bfa6;">
-          <h4 style="color:#09203a; font-weight:700; margin-bottom: 15px;">
-            Built MCP,LLM powered with Lang Chain memory production ready Chatbot for Air Asia
- Ikhlas in 3 months Internship along with my continuous Master’s study
-          </h4>
-          <ul style="list-style: none; padding: 0; color:#1c1c1c; line-height: 1.7;">
-            <li> <strong>Organization:</strong> Air Asia (Ikhlas) </li>
-            <li> <strong>Location:</strong> Kuala Lumpur, Malaysia </li>
-           
-          </ul>
-        </div>
-      </div>
-
-      <!-- Publication Card 2 -->
-      <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
-        <div class="publication-card" 
-             style="background: linear-gradient(135deg, #ffffff 0%, #f9f2ff 100%);
-                    border-radius: 16px; padding: 25px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-                    transition: all 0.4s ease; border-left: 6px solid #9c27b0;">
-          <h4 style="color:#09203a; font-weight:700; margin-bottom: 15px;">
-            Bravo award for excellence in software quality assurance, contributing to a 20% reduction in
- post-release defects
-          </h4>
-          <ul style="list-style: none; padding: 0; color:#1c1c1c; line-height: 1.7;">
-            <li> <strong>Organization:</strong> Aurigo </li>
-            <li> <strong>Location:</strong> Bangalore, India </li>
-           
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-.publication-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-}
-</style>
-
-
-<!-- pub -->
-
-  <!-- Start Links section -->
-  <section id="links" class="services">
+  <!-- ======= Skills Section ======= -->
+  <section id="skills" class="services">
     <div class="container">
       <div class="section-title">
-        <h2>CV & Links</h2>
+        <h2>Skills</h2>
       </div>
       <div class="row">
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://drive.google.com/file/d/1oTqyVNZJxWpYyUR06X9h4ZAsHx9J_Z1C/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a href="https://drive.google.com/file/d/1oTqyVNZJxWpYyUR06X9h4ZAsHx9J_Z1C/view?usp=sharing" target="_blank">CV</a></h4>
-          <p class="description" style="color:#fff;">The link contains downloadable CV</p>
+        <div class="col-lg-12" data-aos="fade-up">
+
+          <!-- Programming Languages -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+            <h4>Programming Languages</h4>
+            <p>
+              <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="Python" title="Python" height="50" width="150">
+              <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java" title="Java" height="50" width="120">
+              <img src="https://www.vectorlogo.zone/logos/r-project/r-project-official.svg" alt="R" title="R" height="50" width="100">
+              <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-ar21.svg" alt="SQL" title="SQL" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-ar21.svg" alt="Apache Spark" title="Apache Spark" height="60" width="130">
+            </p>
+          </div>
+
+          <!-- AI / ML / LLM -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="150">
+            <h4>AI, Machine Learning & LLMs</h4>
+            <p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" title="Scikit-learn" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="TensorFlow" title="TensorFlow" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="PyTorch" title="PyTorch" height="60" width="120">
+              <img src="https://cdn.worldvectorlogo.com/logos/huggingface-2.svg" alt="HuggingFace" title="HuggingFace" height="60" width="120">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/LangChain_Logo.svg" alt="LangChain" title="LangChain" height="60" width="140">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Pinecone-Full-Logo-Black.svg" alt="Pinecone" title="Pinecone" height="60" width="140">
+              <img src="https://img.shields.io/badge/FAISS-005C84?style=for-the-badge&logo=facebook&logoColor=white" alt="FAISS" title="FAISS" height="60">
+              <img src="https://img.shields.io/badge/LoRA-FF6F00?style=for-the-badge" alt="LoRA" title="LoRA / QLoRA — LLM Fine-Tuning" height="60">
+              <img src="https://img.shields.io/badge/RAG-00C853?style=for-the-badge" alt="RAG" title="RAG — Retrieval-Augmented Generation" height="60">
+            </p>
+          </div>
+
+          <!-- Cloud & AI Platforms -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+            <h4>Cloud & AI Platforms</h4>
+            <p>
+              <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-ar21.svg" alt="Azure" title="Azure — AI Foundry, Copilot Studio" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="AWS" title="AWS" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="GCP" title="GCP" height="60" width="120">
+              <img src="https://img.shields.io/badge/Azure%20AI%20Foundry-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure AI Foundry" title="Azure AI Foundry" height="60">
+              <img src="https://img.shields.io/badge/Copilot%20Studio-0F6CBD?style=for-the-badge&logo=microsoft&logoColor=white" alt="Copilot Studio" title="Copilot Studio" height="60">
+            </p>
+          </div>
+
+          <!-- Data Engineering -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="250">
+            <h4>Data Engineering & Big Data</h4>
+            <p>
+              <img src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-ar21.svg" alt="Hadoop" title="Hadoop" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/apache_hive/apache_hive-ar21.svg" alt="Hive" title="Hive" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/databricks/databricks-ar21.svg" alt="Databricks" title="Databricks" height="60" width="120">
+              <img src="https://img.shields.io/badge/ETL-FF5722?style=for-the-badge" alt="ETL" title="ETL Pipelines" height="60">
+              <img src="https://img.shields.io/badge/Data%20Lake-2196F3?style=for-the-badge" alt="Data Lake" title="Data Lake Concepts" height="60">
+            </p>
+          </div>
+
+          <!-- DevOps & Infra -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+            <h4>DevOps, MLOps & Infrastructure</h4>
+            <p>
+              <img src="https://www.vectorlogo.zone/logos/docker/docker-ar21.svg" alt="Docker" title="Docker" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-ar21.svg" alt="Kubernetes" title="Kubernetes" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-ar21.svg" alt="Jenkins" title="Jenkins" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/redis/redis-ar21.svg" alt="Redis" title="Redis" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="Git" title="Git" height="60" width="120">
+              <img src="https://img.shields.io/badge/CI%2FCD-2E7D32?style=for-the-badge" alt="CI/CD" title="CI/CD Pipelines" height="60">
+              <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" title="FastAPI" height="60">
+            </p>
+          </div>
+
+          <!-- APIs & Orchestration -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="350">
+            <h4>APIs, Orchestration & Automation</h4>
+            <p>
+              <img src="https://www.vectorlogo.zone/logos/graphql/graphql-ar21.svg" alt="GraphQL" title="GraphQL" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/hasuraio/hasuraio-ar21.svg" alt="Hasura" title="Hasura" height="60" width="120">
+              <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" title="Postman" height="60" width="60">
+              <img src="https://img.shields.io/badge/n8n-FF6D5A?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n" title="n8n — Workflow Automation" height="60">
+              <img src="https://img.shields.io/badge/REST%20API-6C757D?style=for-the-badge" alt="REST API" title="RESTful APIs" height="60">
+              <img src="https://img.shields.io/badge/JSON%20Function%20Calling-3C78D8?style=for-the-badge" alt="JSON Function Calling" title="JSON Function Calling" height="60">
+            </p>
+          </div>
+
+          <!-- Data Viz -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="400">
+            <h4>Data Visualization</h4>
+            <p>
+              <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-ar21.svg" alt="Power BI" title="Power BI" height="60" width="120">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau" title="Tableau" height="60" width="140">
+            </p>
+          </div>
+
+          <!-- QA -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="450">
+            <h4>Automation & QA</h4>
+            <p>
+              <img src="https://selenium.dev/images/selenium_logo_square_green.png" alt="Selenium" title="Selenium" height="60" width="60">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Swagger-logo.png" alt="Swagger" title="Swagger / OpenAPI" height="60" width="120">
+            </p>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skills-category" data-aos="fade-up" data-aos-delay="500">
+            <h4>Soft Skills</h4>
+            <p style="text-align:left; font-weight:600; color:#09203a; font-size: 1rem;">
+              Communication • Analytical Thinking • Strategic Planning • Attention to Detail • Stakeholder Engagement • Team Leadership • Agile Collaboration • Fast Learning
+            </p>
+          </div>
+
         </div>
-        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up">
-          <a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank"><div class="icon"><i class="icofont-link"></i></div></a>
-          <h4 class="title"><a href="https://github.com/rajaprerak/LeetCode_Problems" target="_blank">LeetCode Repository</a></h4>
-          <p class="description" style="color:#fff;"> The github repository contains leetcode problems solution in python.</p>
-        </div>
-        <!-- <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-          <a href="https://techingenious.herokuapp.com/" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a href="https://techingenious.herokuapp.com/" target="_blank">Blog</a></h4>
-          <p class="description" style="color:#fff;">Blog containing articles on AI, coding, development</p>
-        </div> -->
       </div>
     </div>
-  </section> <!--End Links Section -->
+  </section>
+  <!-- End Skills Section -->
 
+  <!-- ======= Achievements Section ======= -->
+  <section id="achievements" class="services" style="background: #0b1a2a; color: white; padding: 60px 0;">
+    <div class="container">
+      <div class="section-title text-center mb-5">
+        <h2 style="color: #00bfa6; font-weight: 700; font-size: 2rem;">Achievements</h2>
+        <p style="color: #b0bec5;">Key milestones and professional contributions</p>
+      </div>
 
-  <!-- Start Contact Section -->
+      <div class="row justify-content-center">
 
+        <div class="col-lg-10 mb-4" data-aos="fade-up">
+          <div class="achievement-card">
+            <h4 style="color:#09203a; font-weight:700; margin-bottom: 15px;">
+              Built MCP, LLM-powered Production Chatbot for Air Asia Ikhlas
+            </h4>
+            <ul style="list-style: none; padding: 0; color:#1c1c1c; line-height: 1.7;">
+              <li><strong>Organization:</strong> Air Asia Ikhlas, Kuala Lumpur</li>
+              <li><strong>Impact:</strong> Delivered production-ready chatbot in 3 months alongside continuous Master's study using MCP, LangChain memory, Gemini, and Redis caching.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="achievement-card purple">
+            <h4 style="color:#09203a; font-weight:700; margin-bottom: 15px;">
+              Architected GenAI POC → Production for NFU Mutual in 3 Months
+            </h4>
+            <ul style="list-style: none; padding: 0; color:#1c1c1c; line-height: 1.7;">
+              <li><strong>Organization:</strong> Zensar Technology (Client: NFU Mutual)</li>
+              <li><strong>Impact:</strong> Led claims quality assessment and Data COE enablement solutions on Microsoft Azure AI — from concept to production.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="achievement-card gold">
+            <h4 style="color:#09203a; font-weight:700; margin-bottom: 15px;">
+              Bravo Award for Excellence — 20% Reduction in Post-Release Defects
+            </h4>
+            <ul style="list-style: none; padding: 0; color:#1c1c1c; line-height: 1.7;">
+              <li><strong>Organization:</strong> Aurigo Software, Bangalore</li>
+              <li><strong>Impact:</strong> Recognized for implementing organization's key values and driving software quality excellence.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="achievement-card">
+            <h4 style="color:#09203a; font-weight:700; margin-bottom: 15px;">
+              IDP System — 80% Reduction in Manual Invoice Processing
+            </h4>
+            <ul style="list-style: none; padding: 0; color:#1c1c1c; line-height: 1.7;">
+              <li><strong>Organization:</strong> Zensar Technology</li>
+              <li><strong>Impact:</strong> Built end-to-end AI-powered document processing with OCR + LLM + rule-based intelligence, decoupled pipeline architecture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="achievement-card purple">
+            <h4 style="color:#09203a; font-weight:700; margin-bottom: 15px;">
+              Masters with Distinction — CGPA 3.98/4.00
+            </h4>
+            <ul style="list-style: none; padding: 0; color:#1c1c1c; line-height: 1.7;">
+              <li><strong>Institution:</strong> University of Malaya, Kuala Lumpur</li>
+              <li><strong>Impact:</strong> Graduated with highest honors while simultaneously completing a full-time internship at Air Asia Ikhlas.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Achievements Section -->
+
+  <!-- ======= Contact Section ======= -->
   <section id="contacts" class="contact">
     <div class="container">
-
       <div class="section-title">
         <h2>Contact</h2>
       </div>
@@ -893,7 +1071,7 @@
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
             <p>Yelahanka</p>
-            <p>Bangalore,Karnataka</p>
+            <p>Bangalore, Karnataka</p>
             <p>India</p>
           </div>
         </div>
@@ -903,14 +1081,9 @@
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
             <div class="social-links">
-              <a href="https://www.linkedin.com/in/mohmuz14/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              <a href="https://www.github.com/mohmuz14" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-              <a href="mailto:mohmuzsha786@gmail.com" target="_blank" class="email">
-                <i class="bx bx-envelope"></i>
-            </a>
-            
-
-
+              <a href="https://www.linkedin.com/in/mohmuz14/" target="_blank" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.github.com/mohmuz14" target="_blank" class="github" title="GitHub"><i class="bx bxl-github"></i></a>
+              <a href="mailto:mohmuzsha786@gmail.com" target="_blank" class="email" title="Email"><i class="bx bx-envelope"></i></a>
             </div>
           </div>
         </div>
@@ -919,22 +1092,44 @@
           <div class="info-box">
             <i class="bx bx-envelope"></i>
             <h3>Email</h3>
-            <p>mohmuzsha786@gmail.com</p>
+            <p><a href="mailto:mohmuzsha786@gmail.com" style="color: inherit;">mohmuzsha786@gmail.com</a></p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
             <h3>Contact</h3>
-            <p>+91 7019013117</p>
+            <p><a href="tel:+917019013117" style="color: inherit;">+91 7019013117</a></p>
           </div>
         </div>
       </div>
-      <!-- <div id="sfczmlqxr5caww28rswrt8849ghbekgnh3j" ></div><script type="text/javascript" src="https://counter1.stat.ovh/private/counter.js?c=zmlqxr5caww28rswrt8849ghbekgnh3j&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free web counter"><img src="https://counter1.stat.ovh/private/freecounterstat.php?c=zmlqxr5caww28rswrt8849ghbekgnh3j" border="0" title="free web counter" alt="free web counter" style="visibility: none;"></a></noscript> -->
+
+      <div class="row mt-4 justify-content-center">
+        <div class="col-md-8 text-center">
+          <a href="https://drive.google.com/file/d/1gG5FvP-RBPPki7SHfk4DoMQkNZlRToAn/view?usp=sharing" target="_blank" class="btn" style="background: #12D640; color: #fff; padding: 12px 35px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block; margin: 5px;">
+            <i class="bx bx-download"></i> Download CV
+          </a>
+          <a href="https://www.linkedin.com/in/mohmuz14/" target="_blank" class="btn" style="background: transparent; color: #12D640; border: 2px solid #12D640; padding: 12px 35px; border-radius: 30px; font-weight: 600; text-decoration: none; display: inline-block; margin: 5px;">
+            <i class="bx bxl-linkedin"></i> Connect on LinkedIn
+          </a>
+        </div>
+      </div>
     </div>
   </section>
-
   <!-- End Contact Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer style="background: #050c16; padding: 25px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container">
+      <p style="color: #6c757d; margin: 0; font-size: 0.9rem;">
+        &copy; 2026 <strong style="color: #12D640;">Mohammed Muzeeb Shaik</strong>. All Rights Reserved.
+      </p>
+      <p style="color: #495057; margin: 5px 0 0; font-size: 0.8rem;">
+        AI Engineer | GenAI Specialist | Bangalore, India
+      </p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -947,12 +1142,21 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
+
   <script type="text/javascript">
     var typed = new Typed('.typing',{
-      strings: ["An Optimistic Individual", "A Data Science Professional", "An Enthusiast in Artificial Intelligence", "A Passionate Learner"],
+      strings: [
+        "an AI Engineer",
+        "a GenAI Specialist", 
+        "an LLM & RAG Expert",
+        "an Azure AI Developer",
+        "a Data Science Professional",
+        "an Agentic AI Enthusiast"
+      ],
       loop: true,
       typeSpeed: 65,
-      backSpeed: 65
+      backSpeed: 45,
+      backDelay: 1500
     });
   </script>
 
@@ -960,5 +1164,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
