@@ -395,9 +395,7 @@
     .to-top.show { display: flex; }
 
     /* ============================================================
-       CRITICAL LAYOUT FIX — stop template sections overlapping.
-       The template positions sections fixed/absolute (one-page app);
-       force genuine top-to-bottom document flow.
+       CRITICAL LAYOUT FIX — normal document flow for all sections
     ============================================================ */
     #hero,
     #about, #experience, #education, #certifications,
@@ -438,7 +436,30 @@
     .achievement-card, .achievement-card * { color: inherit; }
     .skills-category h4 { color: var(--ink); }
 
-    section { padding-top: 60px; padding-bottom: 60px; }
+    /* ------------------------------------------------------------
+       THE REAL OVERLAP FIX
+       Template style.css uses:  section{position:absolute;top:140px;opacity:0}
+       and reveals ONE at a time via .section-show (a single-page-app).
+       Override EVERY section to a normal, always-visible block so the
+       page becomes a continuous top-to-bottom scroll.
+    ------------------------------------------------------------ */
+    body section,
+    body > section,
+    section.about, section.services, section.portfolio, section.contact,
+    section.section-show {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
 
     [data-aos] { opacity: 1 !important; transform: none !important; }
   </style>
@@ -451,7 +472,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-169007209-3');
   </script>
-  <base target="_blank">
+  <!-- NOTE: <base target="_blank"> removed — it forced in-page nav links to open new tabs. -->
 </head>
 
 <body>
@@ -497,7 +518,7 @@
           </div>
           <div class="hero-cta">
             <a href="https://drive.google.com/file/d/1D0wuCDzIJnJ270-_fMvfMUHLN3ZBeyUO/view?usp=drive_link" class="btn-primary-x"><i class="bx bx-download"></i> Download CV</a>
-            <a href="#portfolio" class="btn-ghost-x" target="_self"><i class="bx bx-grid-alt"></i> View Projects</a>
+            <a href="#portfolio" class="btn-ghost-x"><i class="bx bx-grid-alt"></i> View Projects</a>
           </div>
           <div class="hero-socials">
             <a href="https://www.linkedin.com/in/mohmuz14/" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
@@ -512,7 +533,7 @@
         </div>
       </div>
     </div>
-    <a href="#about" class="scroll-cue" target="_self" aria-label="Scroll down"><i class="bx bx-chevron-down"></i></a>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><i class="bx bx-chevron-down"></i></a>
   </header>
 
   <!-- ======= About Section ======= -->
@@ -557,7 +578,6 @@
             </div>
           </div>
 
-          <!-- Quick stats -->
           <div class="stats-strip" style="margin-top: 18px;">
             <div class="stat-box"><div class="num">6+</div><div class="lbl">Years Experience</div></div>
             <div class="stat-box"><div class="num">3.98</div><div class="lbl">Master's CGPA</div></div>
@@ -577,7 +597,6 @@
       </div>
     </div>
 
-    <!-- Areas of Expertise -->
     <div class="interests container">
       <div class="section-title"><h2>Areas of Expertise</h2></div>
       <div class="row">
@@ -600,7 +619,6 @@
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up">
 
-          <!-- Zensar -->
           <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
             <h4 style="text-align:left;"><a href="https://www.zensar.com/" style="color:#87CEEB">Zensar Technology</a></h4>
             <h5 style="text-align:left;">January 2026 – Present · Bangalore, India</h5>
@@ -618,7 +636,6 @@
             </div>
           </div>
 
-          <!-- Air Asia -->
           <div class="experience-card" data-aos="fade-up" data-aos-delay="150">
             <h4 style="text-align:left;"><a href="https://www.airasia.com/" style="color:#87CEEB">Air Asia Ikhlas</a></h4>
             <h5 style="text-align:left;">May 2025 – July 2025 · Kuala Lumpur, Malaysia</h5>
@@ -635,7 +652,6 @@
             </div>
           </div>
 
-          <!-- Aurigo -->
           <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
             <h4 style="text-align:left;"><a href="https://www.aurigo.com/" style="color:#87CEEB">Aurigo Software</a></h4>
             <h5 style="text-align:left;">December 2018 – September 2024 · Bangalore, India</h5>
@@ -651,7 +667,6 @@
             </div>
           </div>
 
-          <!-- DXC -->
           <div class="experience-card" data-aos="fade-up" data-aos-delay="250">
             <h4 style="text-align:left;"><a href="https://www.dxc.com/" style="color:#87CEEB">DXC Technology</a></h4>
             <h5 style="text-align:left;">September 2018 – December 2018 · Bangalore, India</h5>
@@ -1138,7 +1153,7 @@
   </footer>
 
   <!-- Back to top -->
-  <a href="#hero" class="to-top" id="toTop" target="_self"><i class="bx bx-chevron-up"></i></a>
+  <a href="#hero" class="to-top" id="toTop"><i class="bx bx-chevron-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -1202,13 +1217,43 @@
         });
       }
 
+      // Smooth-scroll in-page anchors (and never open them in a new tab)
+      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.setAttribute('target', '_self');
+        a.addEventListener('click', function (e) {
+          var id = a.getAttribute('href');
+          if (id && id.length > 1) {
+            var el = document.querySelector(id);
+            if (el) {
+              e.preventDefault();
+              window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' });
+              menu.classList.remove('open');
+            }
+          }
+        });
+      });
+
+      // Open ONLY external links in a new tab
+      document.querySelectorAll('a[href^="http"], a[href^="mailto"]').forEach(function (a) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      });
+
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
     })();
-  </script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Initialise VenoBox for project detail pop-ups (template main.js is no longer loaded)
+    window.addEventListener('load', function () {
+      try {
+        if (typeof VenoBox !== 'undefined') {
+          new VenoBox({ selector: '.venobox', numeration: false, infinigall: true });
+        } else if (window.jQuery && jQuery.fn.venobox) {
+          jQuery('.venobox').venobox();
+        }
+      } catch (err) { /* popups fall back to normal links */ }
+    });
+  </script>
 
 </body>
 </html>
