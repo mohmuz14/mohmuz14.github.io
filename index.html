@@ -119,11 +119,12 @@
       white-space: nowrap;
       transition: color 0.25s;
     }
-    @media (min-width: 992px) and (max-width: 1300px) {
-      .site-nav { padding: 0 2vw; gap: 12px; }
-      .site-nav ul { gap: 14px; }
-      .site-nav ul a { font-size: 0.84rem; }
+    @media (min-width: 992px) and (max-width: 1450px) {
+      .site-nav { padding: 0 2vw; gap: 10px; }
+      .site-nav ul { gap: 13px; }
+      .site-nav ul a { font-size: 0.82rem; }
       .site-nav .brand { font-size: 1rem; }
+      .nav-cta { padding: 7px 14px !important; }
     }
     .site-nav ul a::after {
       content: "";
@@ -208,6 +209,21 @@
       line-height: 1.75;
       margin: 0 0 26px;
     }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      margin: 0 0 26px;
+    }
+    .hero-stats div { display: flex; flex-direction: column; line-height: 1.1; }
+    .hero-stats b {
+      color: var(--accent);
+      font-family: "Poppins", sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+    .hero-stats span { color: #9fb3c8; font-size: 0.78rem; margin-top: 4px; }
+
     .hero-tags { margin-bottom: 30px; }
     .hero-tags span {
       display: inline-block;
@@ -246,7 +262,12 @@
     }
     .hero-socials a:hover { background: var(--accent); color: #04210d; transform: translateY(-3px); }
 
-    .hero-photo-wrap { position: relative; display: flex; justify-content: center; }
+    /* Hero photo */
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
     .hero-photo {
       width: 320px; height: 320px;
       max-width: 78vw; max-height: 78vw;
@@ -302,8 +323,9 @@
       .hero { padding: 40px 0; }
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 34px; }
       .hero p.lead { margin-left: auto; margin-right: auto; }
-      .hero-cta, .hero-socials, .hero-tags { justify-content: center; }
+      .hero-cta, .hero-socials, .hero-tags, .hero-stats { justify-content: center; }
       .hero-tags { text-align: center; }
+      .hero-stats div { align-items: center; }
       .hero-socials { justify-content: center; }
       .hero-photo-wrap { order: -1; }
       .scroll-cue { display: none; }
@@ -352,10 +374,18 @@
     .skills-category p { margin-bottom: 0; }
     .skills-category img { margin: 5px 8px 5px 0; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); }
 
-    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: start; }
     .cert-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
     .cert-card:hover { transform: translateY(-5px); }
-    .cert-card img { width: 100%; height: 200px; object-fit: cover; }
+    /* Keep certificate/award images at their NATURAL dimensions — no cropping */
+    .cert-card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background: #f4f7fb;
+      padding: 16px;
+    }
     .cert-card .cert-info { padding: 15px; }
     .cert-card .cert-info h4 { color: var(--ink); font-size: 1rem; font-weight: 600; margin-bottom: 5px; }
     .cert-card .cert-info p { color: #666; font-size: 0.85rem; margin-bottom: 0; }
@@ -370,7 +400,10 @@
     .achievement-card.purple { border-left-color: #9c27b0; background: linear-gradient(135deg,#fff 0%,#f9f2ff 100%); }
     .achievement-card.gold { border-left-color: #ffc107; background: linear-gradient(135deg,#fff 0%,#fff8e1 100%); }
 
-    .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 10px; }
+    .stats-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 18px; margin-top: 10px;
+    }
     .stat-box {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(18,214,64,0.18);
@@ -395,7 +428,7 @@
     .to-top.show { display: flex; }
 
     /* ============================================================
-       CRITICAL LAYOUT FIX — normal document flow for all sections
+       CRITICAL LAYOUT FIX — normal top-to-bottom document flow
     ============================================================ */
     #hero,
     #about, #experience, #education, #certifications,
@@ -437,11 +470,7 @@
     .skills-category h4 { color: var(--ink); }
 
     /* ------------------------------------------------------------
-       THE REAL OVERLAP FIX
-       Template style.css uses:  section{position:absolute;top:140px;opacity:0}
-       and reveals ONE at a time via .section-show (a single-page-app).
-       Override EVERY section to a normal, always-visible block so the
-       page becomes a continuous top-to-bottom scroll.
+       THE REAL OVERLAP FIX — force every section visible & in flow
     ------------------------------------------------------------ */
     body section,
     body > section,
@@ -461,8 +490,25 @@
       padding-bottom: 60px;
     }
 
-    [data-aos] { opacity: 1 !important; transform: none !important; }
+    /* ------------------------------------------------------------
+       SLIDE-IN-FROM-THE-RIGHT reveal (replaces the plain drop-down feel)
+    ------------------------------------------------------------ */
+    [data-aos] {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+    [data-aos].aos-in { opacity: 1; transform: none; }
+    .hero-photo-wrap[data-aos] { transform: translateX(90px) scale(0.96); }
+    .hero-photo-wrap[data-aos].aos-in { transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-aos], .hero-photo-wrap[data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
   </style>
+  <!-- If JS is disabled, show everything (no animation) -->
+  <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}</style></noscript>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
@@ -472,7 +518,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-169007209-3');
   </script>
-  <!-- NOTE: <base target="_blank"> removed — it forced in-page nav links to open new tabs. -->
+  <!-- <base target="_blank"> removed — it forced in-page nav links to open new tabs. -->
 </head>
 
 <body>
@@ -490,6 +536,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#portfolio">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#achievements">Achievements</a></li>
@@ -503,22 +550,29 @@
     <div class="container">
       <div class="hero-grid">
         <div data-aos="fade-right">
-          <span class="hero-eyebrow">AI Engineer · Generative AI · Agentic AI</span>
+          <span class="hero-eyebrow">AI Engineer · Generative AI · Agentic AI · GraphRAG</span>
           <h1>Mohammed Muzeeb Shaik</h1>
           <h2>I'm <span class="typing"></span></h2>
           <p class="lead">
-            AI Engineer building and deploying enterprise AI applications with
+            I design, build and <strong>ship production-grade AI end-to-end</strong> — from
+            <strong>Proof of Concept to live production</strong> — across multiple domains including
+            <strong>insurance, aviation and enterprise software</strong>. My work spans
             <strong>LLMs, Generative &amp; Agentic AI, GraphRAG, Intelligent Document Processing</strong>
-            and the <strong>Azure AI Foundry</strong> ecosystem — taking solutions from
-            Proof of Concept to production with strong software-engineering rigor.
+            and full MLOps, delivered with strong software-engineering rigor.
           </p>
+          <div class="hero-stats">
+            <div><b>6+</b><span>Years in Tech</span></div>
+            <div><b>3.98</b><span>Master's CGPA</span></div>
+            <div><b>~80%</b><span>Effort Saved (IDP)</span></div>
+            <div><b>10+</b><span>AI Projects</span></div>
+          </div>
           <div class="hero-tags">
-            <span>LangGraph</span><span>RAG / GraphRAG</span><span>Azure AI Foundry</span>
-            <span>LLM Fine-Tuning</span><span>MLOps</span><span>Neo4j</span>
+            <span>LangGraph</span><span>RAG / GraphRAG</span><span>Neo4j</span>
+            <span>Azure AI</span><span>LLM Fine-Tuning</span><span>MLOps</span>
           </div>
           <div class="hero-cta">
             <a href="https://drive.google.com/file/d/1D0wuCDzIJnJ270-_fMvfMUHLN3ZBeyUO/view?usp=drive_link" class="btn-primary-x"><i class="bx bx-download"></i> Download CV</a>
-            <a href="#portfolio" class="btn-ghost-x"><i class="bx bx-grid-alt"></i> View Projects</a>
+            <a href="#portfolio" class="btn-ghost-x" target="_self"><i class="bx bx-grid-alt"></i> View Projects</a>
           </div>
           <div class="hero-socials">
             <a href="https://www.linkedin.com/in/mohmuz14/" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
@@ -533,7 +587,7 @@
         </div>
       </div>
     </div>
-    <a href="#about" class="scroll-cue" aria-label="Scroll down"><i class="bx bx-chevron-down"></i></a>
+    <a href="#about" class="scroll-cue" target="_self" aria-label="Scroll down"><i class="bx bx-chevron-down"></i></a>
   </header>
 
   <!-- ======= About Section ======= -->
@@ -1153,7 +1207,7 @@
   </footer>
 
   <!-- Back to top -->
-  <a href="#hero" class="to-top" id="toTop"><i class="bx bx-chevron-up"></i></a>
+  <a href="#hero" class="to-top" id="toTop" target="_self"><i class="bx bx-chevron-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -1172,17 +1226,18 @@
     var typed = new Typed('.typing', {
       strings: [
         "an AI Engineer",
-        "a Generative AI Specialist",
-        "an Agentic AI Engineer",
-        "a GraphRAG & RAG Expert",
-        "an Azure AI Foundry Developer",
-        "an LLM & Document Intelligence Engineer"
+        "a Data Scientist",
+        "a GenAI Engineer",
+        "an Agentic AI Developer",
+        "an LLM & RAG Specialist",
+        "an end-to-end Product Builder",
+        "an Optimist"
       ],
-      loop: true, typeSpeed: 60, backSpeed: 40, backDelay: 1500
+      loop: true, typeSpeed: 60, backSpeed: 40, backDelay: 1400
     });
   </script>
 
-  <!-- Custom navbar / scrollspy / UX behaviour -->
+  <!-- Custom navbar / scrollspy / reveal / UX behaviour -->
   <script>
     (function () {
       var nav = document.getElementById('siteNav');
@@ -1191,20 +1246,17 @@
       var links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]'));
       var toTop = document.getElementById('toTop');
 
-      // Mobile menu toggle
       toggle.addEventListener('click', function () { menu.classList.toggle('open'); });
       menu.addEventListener('click', function (e) {
         if (e.target.tagName === 'A') menu.classList.remove('open');
       });
 
-      // Navbar background on scroll + back-to-top visibility
       function onScroll() {
         if (window.scrollY > 40) { nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
         if (window.scrollY > 600) { toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
         spy();
       }
 
-      // Scrollspy — highlight current section
       var sections = links
         .map(function (l) { return document.querySelector(l.getAttribute('href')); })
         .filter(Boolean);
@@ -1217,7 +1269,7 @@
         });
       }
 
-      // Smooth-scroll in-page anchors (and never open them in a new tab)
+      // Smooth-scroll in-page anchors (same tab)
       document.querySelectorAll('a[href^="#"]').forEach(function (a) {
         a.setAttribute('target', '_self');
         a.addEventListener('click', function (e) {
@@ -1233,17 +1285,34 @@
         });
       });
 
-      // Open ONLY external links in a new tab
+      // External links open in a new tab
       document.querySelectorAll('a[href^="http"], a[href^="mailto"]').forEach(function (a) {
         a.setAttribute('target', '_blank');
         a.setAttribute('rel', 'noopener noreferrer');
       });
 
+      // Slide-in-from-right reveal
+      var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-aos]'));
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var delay = parseInt(entry.target.getAttribute('data-aos-delay') || '0', 10);
+              setTimeout(function () { entry.target.classList.add('aos-in'); }, Math.min(delay, 500));
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('aos-in'); });
+      }
+
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
     })();
 
-    // Initialise VenoBox for project detail pop-ups (template main.js is no longer loaded)
+    // VenoBox project pop-ups (template main.js is not loaded)
     window.addEventListener('load', function () {
       try {
         if (typeof VenoBox !== 'undefined') {
@@ -1254,6 +1323,8 @@
       } catch (err) { /* popups fall back to normal links */ }
     });
   </script>
+
+  <!-- assets/js/main.js intentionally NOT loaded (it caused the section overlap). -->
 
 </body>
 </html>
