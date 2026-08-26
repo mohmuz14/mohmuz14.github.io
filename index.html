@@ -19,18 +19,28 @@
   <meta name="description" content="AI Engineer with hands-on experience deploying production-ready intelligent systems using LLMs, Generative AI, Agentic AI, RAG, GraphRAG and Azure AI Foundry. Intelligent Document Processing & enterprise AI automation.">
   <meta name="keywords" content="AI Engineer, Generative AI, Agentic AI, GraphRAG, LLM, RAG, LangChain, LangGraph, Azure AI Foundry, Intelligent Document Processing, Machine Learning, NLP, Python, Bangalore">
   <meta name="author" content="Mohammed Muzeeb Shaik">
+  <link rel="canonical" href="https://mohmuz14.github.io/">
+  <meta name="theme-color" content="#010e1b">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Mohammed Muzeeb Shaik | AI Engineer & GenAI Specialist">
   <meta property="og:description" content="AI Engineer deploying production-ready LLM systems, Agentic AI, GraphRAG pipelines, Intelligent Document Processing and Azure AI solutions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mohmuz14.github.io/">
-  <meta property="og:image" content="https://mohmuz14.github.io/assets/img/education/ss.webp">
+  <meta property="og:image" content="https://mohmuz14.github.io/assets/img/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mohammed Muzeeb Shaik - AI Engineer & GenAI Specialist">
+  <meta property="og:site_name" content="Mohammed Muzeeb Shaik">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mohammed Muzeeb Shaik | AI Engineer">
   <meta name="twitter:description" content="AI Engineer | Generative AI | Agentic AI | GraphRAG | Azure AI Foundry">
+  <meta name="twitter:image" content="https://mohmuz14.github.io/assets/img/og-card.jpg">
+  <meta name="twitter:image:alt" content="Mohammed Muzeeb Shaik - AI Engineer & GenAI Specialist">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -532,6 +542,41 @@
       }
     }
 
+    /* --- contact form --- */
+    .contact-form {
+      background: #09203a; border: 1px solid rgba(28,125,50,0.45);
+      border-radius: 14px; padding: 28px 26px;
+    }
+    .contact-form-title { color: #fff; font-size: 1.15rem; font-weight: 600; margin: 0 0 18px; }
+    .cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .cf-field { margin-bottom: 16px; }
+    .cf-field label {
+      display: block; color: #b0bec5; font-size: 0.82rem;
+      font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .cf-field input, .cf-field textarea {
+      width: 100%; background: #061627; color: #eaf1f8;
+      border: 1px solid rgba(255,255,255,0.14); border-radius: 8px;
+      padding: 11px 14px; font-size: 0.95rem; font-family: inherit;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .cf-field input::placeholder, .cf-field textarea::placeholder { color: #5b6b78; }
+    .cf-field input:focus, .cf-field textarea:focus {
+      outline: none; border-color: #12d640; box-shadow: 0 0 0 3px rgba(18,214,64,0.18);
+    }
+    .cf-field input[aria-invalid="true"], .cf-field textarea[aria-invalid="true"] { border-color: #ed3c0d; }
+    .cf-submit {
+      background: #12d640; color: #06210d; border: none; border-radius: 30px;
+      padding: 12px 34px; font-weight: 700; font-size: 0.95rem; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 8px; transition: filter .2s ease;
+    }
+    .cf-submit:hover { filter: brightness(1.1); }
+    .cf-submit[disabled] { opacity: .6; cursor: not-allowed; }
+    .cf-status { margin: 14px 0 0; font-size: 0.9rem; min-height: 1.2em; color: #b0bec5; }
+    .cf-status.ok { color: #12d640; }
+    .cf-status.err { color: #ffc107; }
+    @media (max-width: 640px) { .cf-grid { grid-template-columns: 1fr; gap: 0; } }
+
   </style>
   <!-- If JS is disabled, show everything (no animation) -->
   <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}  </style></noscript>
@@ -545,6 +590,39 @@
     gtag('config', 'UA-169007209-3');
   </script>
   <!-- <base target="_blank"> removed — it forced in-page nav links to open new tabs. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Muzeeb Shaik",
+    "jobTitle": "AI/ML Engineer",
+    "description": "AI Engineer specialising in Generative AI, Agentic AI, GraphRAG and production LLM systems.",
+    "url": "https://mohmuz14.github.io/",
+    "image": "https://mohmuz14.github.io/assets/img/og-card.jpg",
+    "email": "mailto:mohmuzsha786@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN" },
+    "worksFor": { "@type": "Organization", "name": "Zensar Technologies" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Malaya" },
+      { "@type": "CollegeOrUniversity", "name": "Nitte Meenakshi Institute of Technology" }
+    ],
+    "knowsAbout": ["Generative AI","Agentic AI","GraphRAG","Retrieval-Augmented Generation",
+                   "Large Language Models","Azure AI Foundry","Intelligent Document Processing",
+                   "LangChain","Neo4j","MLOps","Python"],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Claude Certified Developer - Foundations",
+      "credentialCategory": "certificate",
+      "recognizedBy": { "@type": "Organization", "name": "Anthropic" },
+      "url": "https://www.credly.com/badges/62902d20-b212-449f-8386-1b37bbfc1423"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/mohmuz14/",
+      "https://www.github.com/mohmuz14",
+      "https://www.credly.com/badges/62902d20-b212-449f-8386-1b37bbfc1423"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -1210,6 +1288,36 @@
         </div>
       </div>
 
+
+      <div class="row mt-5 justify-content-center">
+        <div class="col-lg-9">
+          <form class="contact-form" id="contactForm" novalidate
+                data-endpoint=""
+                data-fallback-email="mohmuzsha786@gmail.com">
+            <h3 class="contact-form-title">Send me a message</h3>
+            <div class="cf-grid">
+              <div class="cf-field">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Your name">
+              </div>
+              <div class="cf-field">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@company.com">
+              </div>
+            </div>
+            <div class="cf-field">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" required placeholder="What is this about?">
+            </div>
+            <div class="cf-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required placeholder="Tell me a little about the role or project."></textarea>
+            </div>
+            <button type="submit" class="cf-submit"><i class="bx bx-send"></i> Send message</button>
+            <p class="cf-status" id="cfStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
       <div class="row mt-4 justify-content-center">
         <div class="col-md-8 text-center">
           <a href="https://drive.google.com/file/d/1D0wuCDzIJnJ270-_fMvfMUHLN3ZBeyUO/view?usp=drive_link" class="btn" style="background:#12D640;color:#fff;padding:12px 35px;border-radius:30px;font-weight:600;text-decoration:none;display:inline-block;margin:5px;" rel="noopener noreferrer">
@@ -1349,5 +1457,55 @@
 
   <!-- assets/js/main.js intentionally NOT loaded (it caused the section overlap). -->
 
+
+  <script>
+    (function () {
+      var form = document.getElementById('contactForm');
+      if (!form) return;
+      var status = document.getElementById('cfStatus');
+      var btn = form.querySelector('.cf-submit');
+
+      function setStatus(msg, cls) { status.textContent = msg; status.className = 'cf-status' + (cls ? ' ' + cls : ''); }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var fields = ['cf-name', 'cf-email', 'cf-subject', 'cf-message'].map(function (id) { return document.getElementById(id); });
+        var bad = null;
+        fields.forEach(function (f) {
+          var ok = f.checkValidity() && f.value.trim() !== '';
+          f.setAttribute('aria-invalid', ok ? 'false' : 'true');
+          if (!ok && !bad) bad = f;
+        });
+        if (bad) { setStatus('Please complete the highlighted fields.', 'err'); bad.focus(); return; }
+
+        var data = { name: fields[0].value.trim(), email: fields[1].value.trim(),
+                     subject: fields[2].value.trim(), message: fields[3].value.trim() };
+        var endpoint = form.getAttribute('data-endpoint');
+
+        if (!endpoint) {
+          // No form backend configured yet - hand off to the visitor's mail client.
+          var to = form.getAttribute('data-fallback-email');
+          var body = 'From: ' + data.name + ' (' + data.email + ')' + String.fromCharCode(10, 10) + data.message;
+          window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(data.subject) +
+                                 '&body=' + encodeURIComponent(body);
+          setStatus('Opening your email app...', 'ok');
+          return;
+        }
+
+        btn.disabled = true; setStatus('Sending...');
+        fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          form.reset();
+          setStatus('Thanks - your message has been sent. I will get back to you shortly.', 'ok');
+        }).catch(function () {
+          setStatus('Something went wrong. Please email mohmuzsha786@gmail.com directly.', 'err');
+        }).then(function () { btn.disabled = false; });
+      });
+    })();
+  </script>
 </body>
 </html>

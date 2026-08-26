@@ -30,10 +30,21 @@ This is the same check CI runs. It must pass before anything is pushed.
 - **Privacy**: no phone numbers in any page — CI enforces this. Email and
   LinkedIn are the intended contact routes.
 
+## Contact form
+
+`#contactForm` posts JSON to whatever URL sits in its `data-endpoint` attribute.
+That attribute is currently empty, so the form falls back to opening the
+visitor's mail client via `mailto:`. To switch to a real backend (Formspree,
+Getform, Basin or similar), put the endpoint URL in `data-endpoint` -- no other
+change is needed.
+
 ## Outstanding
 
 - `assets/img/certification/azure.webp` is referenced but missing; the Azure
   certificate image needs to be supplied.
+- The CV is still hosted on Google Drive; self-hosting the PDF in the repo
+  would remove that external dependency.
+- Certificates other than the Claude one have no verification links.
 - All ten `projects/*.html` pages carry `TODO:` placeholders awaiting real
   Problem / Approach / Results copy from the site owner. Do not invent this
   content.
