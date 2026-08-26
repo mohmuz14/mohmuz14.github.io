@@ -659,6 +659,28 @@
     .cert-zoom-hint i { font-size: 1rem; }
     @media (hover: none) { .cert-zoom-hint { transform: translateY(0); } }
 
+    /* --- hero credentials --- */
+    .hero-creds {
+      list-style: none; padding: 0; margin: 18px 0 0;
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .hero-creds li {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(18,214,64,0.08); border: 1px solid rgba(18,214,64,0.4);
+      border-radius: 24px; padding: 6px 15px;
+      color: #dbe7f0; font-size: 0.83rem; font-weight: 600;
+    }
+    .hero-creds li i { color: #12d640; font-size: 1rem; }
+    .hero-creds a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(18,214,64,0.7); }
+    .hero-creds a:hover { color: #12d640; }
+    .edu-badges { margin: 8px 10px 0; display: flex; flex-wrap: wrap; gap: 6px; }
+    .edu-badges span {
+      background: rgba(18,214,64,0.12); border: 1px solid rgba(18,214,64,0.45);
+      color: #12d640; border-radius: 20px; padding: 2px 11px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .04em;
+    }
+    @media (max-width: 991px) { .hero-creds { justify-content: center; } }
+
   </style>
   <!-- If JS is disabled, show everything (no animation) -->
   <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}  </style></noscript>
@@ -757,8 +779,17 @@
           </div>
           <div class="hero-tags">
             <span>LangGraph</span><span>RAG / GraphRAG</span><span>Neo4j</span>
-            <span>Azure AI</span><span>LLM Fine-Tuning</span><span>MLOps</span>
+            <span>Azure AI</span><span>LLM Fine-Tuning</span><span>LLM Observability</span>
           </div>
+          <ul class="hero-creds">
+            <li>
+              <i class="bx bx-shield-check"></i>
+              <a href="https://www.credly.com/badges/62902d20-b212-449f-8386-1b37bbfc1423"
+                 target="_blank" rel="noopener noreferrer">Claude Certified Developer</a>
+            </li>
+            <li><i class="bx bx-award"></i>MSc Data Science &mdash; Distinction, 3.98 CGPA</li>
+            <li><i class="bx bx-buildings"></i>Universiti Malaya &middot; QS World #58</li>
+          </ul>
           <div class="hero-cta">
             <a href="assets/cv/Mohammed-Muzeeb-Shaik-CV.pdf" download class="btn-primary-x" rel="noopener noreferrer"><i class="bx bx-download"></i> Download CV</a>
             <a href="#portfolio" class="btn-ghost-x" target="_self"><i class="bx bx-grid-alt"></i> View Projects</a>
@@ -943,6 +974,7 @@
             <p style="text-align:left;color:#fff;padding:5px 10px;"><em>Master's in Data Science</em></p>
             <h5 style="text-align:left;padding:0 10px;" aria-level="4">2024 – 2025 · UM Kuala Lumpur, Malaysia</h5>
             <h6 style="text-align:left;color:#fff;padding:0 10px;" aria-level="5"><strong>Distinction · CGPA 3.98 / 4.00</strong></h6>
+            <p class="edu-badges"><span>Distinction</span><span>QS World #58</span></p>
           </div>
 
           <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="150" style="padding:0;padding-bottom:5px;display:inline-block;">
@@ -1339,6 +1371,16 @@
         </div>
 
         <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="achievement-card purple">
+            <h4 style="color:#09203a;font-weight:700;margin-bottom:15px;" aria-level="3">Introduced AI Observability Across Production LLM Systems</h4>
+            <ul style="list-style:none;padding:0;color:#1c1c1c;line-height:1.7;">
+              <li><strong>Organization:</strong> Zensar Technologies</li>
+              <li><strong>Impact:</strong> Implemented AI observability and monitoring with <strong>Arize Phoenix, Prometheus and Grafana</strong>, improving LLM evaluation, tracing, performance monitoring and operational visibility across AI applications.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-10 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div class="achievement-card">
             <h4 style="color:#09203a;font-weight:700;margin-bottom:15px;" aria-level="3">IDP Platform — ~80% Reduction in Manual Invoice Processing</h4>
             <ul style="list-style:none;padding:0;color:#1c1c1c;line-height:1.7;">
