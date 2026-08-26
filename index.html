@@ -578,10 +578,22 @@
     @media (max-width: 640px) { .cf-grid { grid-template-columns: 1fr; gap: 0; } }
 
 
-    /* --- education alignment: top-align the boxes, normalise image ratios --- */
-    #education .icon-box { vertical-align: top; }
+    /* --- education alignment: equal-height boxes, normalised image ratios --- */
+    #education .row > .col-lg-12 {
+      display: flex !important; flex-wrap: wrap; align-items: stretch;
+      gap: 26px; padding: 0;
+    }
+    #education .icon-box {
+      display: flex !important; flex-direction: column;
+      flex: 0 0 calc(50% - 13px); max-width: calc(50% - 13px);
+      width: auto !important; vertical-align: top; margin: 0 !important;
+    }
     #education .icon-box img {
       width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover;
+    }
+    #education .icon-box > :last-child { margin-bottom: 0; }
+    @media (max-width: 767px) {
+      #education .icon-box { flex: 0 0 100%; max-width: 100%; }
     }
 
   </style>
