@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Keep the CV out of search indexes (it carries personal contact details)
+Disallow: /assets/cv/
