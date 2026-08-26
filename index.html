@@ -645,6 +645,20 @@
       .js-motion .section-title h2::after { width: 120px; transition: none; }
     }
 
+    /* --- certificate lightbox trigger --- */
+    .cert-card > .cert-zoom { display: block; position: relative; overflow: hidden; cursor: zoom-in; }
+    .cert-zoom-hint {
+      position: absolute; inset: auto 0 0 0; display: flex; align-items: center;
+      justify-content: center; gap: 7px; padding: 9px 12px;
+      background: rgba(1,14,27,0.88); color: #12d640;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: .03em;
+      transform: translateY(100%); transition: transform .28s ease;
+    }
+    .cert-card:hover .cert-zoom-hint,
+    .cert-card > .cert-zoom:focus-visible .cert-zoom-hint { transform: translateY(0); }
+    .cert-zoom-hint i { font-size: 1rem; }
+    @media (hover: none) { .cert-zoom-hint { transform: translateY(0); } }
+
   </style>
   <!-- If JS is disabled, show everything (no animation) -->
   <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}  </style></noscript>
@@ -957,43 +971,73 @@
       <div class="cert-grid">
 
         <div class="cert-card" data-aos="fade-up">
-          <img src="assets/img/certification/claude.webp" alt="Claude Certified Developer - Foundations, issued by Anthropic" loading="lazy" width="1600" height="1237">
+          <a href="assets/img/certification/claude.webp" class="venobox cert-zoom" data-gall="certificates" title="Claude Certified Developer - Foundations, issued by Anthropic" aria-label="View Claude Certified Developer - Foundations, issued by Anthropic at full size">
+            <img src="assets/img/certification/claude.webp" alt="Claude Certified Developer - Foundations, issued by Anthropic" loading="lazy" width="1600" height="1237">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Claude Certified Developer &ndash; Foundations</h4><p>Anthropic &middot; Aug 2026</p><a class="cert-verify" href="https://www.credly.com/badges/62902d20-b212-449f-8386-1b37bbfc1423" target="_blank" rel="noopener noreferrer"><i class="bx bx-shield-check"></i> Verify on Credly</a></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
-          <img src="assets/img/certification/gcp.webp" alt="Google Cloud Data Analytics" width="1600" height="1237" loading="lazy" decoding="async">
+          <a href="assets/img/certification/gcp.webp" class="venobox cert-zoom" data-gall="certificates" title="Google Cloud Data Analytics" aria-label="View Google Cloud Data Analytics at full size">
+            <img src="assets/img/certification/gcp.webp" alt="Google Cloud Data Analytics" width="1600" height="1237" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Google Cloud Data Analytics</h4><p>Google Cloud Career Launchpad · Jan 2025</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/img/certification/AWS_Certification.webp" alt="AWS Generative AI Practitioner" loading="lazy" width="1600" height="1236">
+          <a href="assets/img/certification/AWS_Certification.webp" class="venobox cert-zoom" data-gall="certificates" title="AWS Generative AI Practitioner" aria-label="View AWS Generative AI Practitioner at full size">
+            <img src="assets/img/certification/AWS_Certification.webp" alt="AWS Generative AI Practitioner" loading="lazy" width="1600" height="1236">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">AWS Cloud Quest: Generative AI Practitioner</h4><p>Amazon Web Services · 2024</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
-          <img src="assets/img/certification/py.webp" alt="Python Data Structures" width="1584" height="1224" loading="lazy" decoding="async">
+          <a href="assets/img/certification/py.webp" class="venobox cert-zoom" data-gall="certificates" title="Python Data Structures" aria-label="View Python Data Structures at full size">
+            <img src="assets/img/certification/py.webp" alt="Python Data Structures" width="1584" height="1224" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Python Data Structures</h4><p>University of Michigan (Coursera) · Jan 2024</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/img/certification/sql.webp" alt="SQL Intermediate" width="1600" height="1219" loading="lazy" decoding="async">
+          <a href="assets/img/certification/sql.webp" class="venobox cert-zoom" data-gall="certificates" title="SQL Intermediate" aria-label="View SQL Intermediate at full size">
+            <img src="assets/img/certification/sql.webp" alt="SQL Intermediate" width="1600" height="1219" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">SQL (Intermediate)</h4><p>HackerRank · Sep 2023</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="250">
-          <img src="assets/img/certification/br.webp" alt="Bravo Award" width="1425" height="1008" loading="lazy" decoding="async">
+          <a href="assets/img/certification/br.webp" class="venobox cert-zoom" data-gall="certificates" title="Bravo Award" aria-label="View Bravo Award at full size">
+            <img src="assets/img/certification/br.webp" alt="Bravo Award" width="1425" height="1008" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Bravo Award – We Culture</h4><p>Aurigo Software · Excellence in Quality Assurance</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/img/certification/spot.webp" alt="Spot Award" width="1600" height="1035" loading="lazy" decoding="async">
+          <a href="assets/img/certification/spot.webp" class="venobox cert-zoom" data-gall="certificates" title="Spot Award" aria-label="View Spot Award at full size">
+            <img src="assets/img/certification/spot.webp" alt="Spot Award" width="1600" height="1035" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Spot Award – Ownership</h4><p>Aurigo Software · Key Values Implementation</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="350">
-          <img src="assets/img/certification/bravo.webp" alt="Bravo Award Beyond COD" width="1600" height="1132" loading="lazy" decoding="async">
+          <a href="assets/img/certification/bravo.webp" class="venobox cert-zoom" data-gall="certificates" title="Bravo Award Beyond COD" aria-label="View Bravo Award Beyond COD at full size">
+            <img src="assets/img/certification/bravo.webp" alt="Bravo Award Beyond COD" width="1600" height="1132" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Bravo Award – Beyond COD</h4><p>Aurigo Software · 20% Reduction in Post-Release Defects</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
-          <img src="assets/img/certification/ikhlas.webp" alt="Air Asia Certificate" width="1500" height="844" loading="lazy" decoding="async">
+          <a href="assets/img/certification/ikhlas.webp" class="venobox cert-zoom" data-gall="certificates" title="Air Asia Certificate" aria-label="View Air Asia Certificate at full size">
+            <img src="assets/img/certification/ikhlas.webp" alt="Air Asia Certificate" width="1500" height="844" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Air Asia Ikhlas – Internship</h4><p>Kuala Lumpur, Malaysia · LLM Chatbot Production Deployment</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="450">
-          <img src="assets/img/certification/Masters.webp" alt="Masters Degree Certificate" width="1240" height="1755" loading="lazy" decoding="async">
+          <a href="assets/img/certification/Masters.webp" class="venobox cert-zoom" data-gall="certificates" title="Masters Degree Certificate" aria-label="View Masters Degree Certificate at full size">
+            <img src="assets/img/certification/Masters.webp" alt="Masters Degree Certificate" width="1240" height="1755" loading="lazy" decoding="async">
+            <span class="cert-zoom-hint"><i class="bx bx-search-alt"></i> View full size</span>
+          </a>
           <div class="cert-info"><h4 aria-level="3">Master's Degree Certificate</h4><p>University of Malaya · Distinction, CGPA 3.98</p></div>
         </div>
 
