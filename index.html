@@ -578,6 +578,12 @@
     @media (max-width: 640px) { .cf-grid { grid-template-columns: 1fr; gap: 0; } }
 
 
+    /* --- education alignment: top-align the boxes, normalise image ratios --- */
+    #education .icon-box { vertical-align: top; }
+    #education .icon-box img {
+      width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover;
+    }
+
   </style>
   <!-- If JS is disabled, show everything (no animation) -->
   <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}  </style></noscript>
