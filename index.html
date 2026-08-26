@@ -596,6 +596,18 @@
       #education .icon-box { flex: 0 0 100%; max-width: 100%; }
     }
 
+    /* --- grid alignment: equal-height cards, uniform media boxes --- */
+    .portfolio-container { align-items: stretch; }
+    .portfolio-item { display: flex; flex-direction: column; margin-bottom: 26px; }
+    .portfolio-item > .portfolio-wrap { flex: 1; display: flex; flex-direction: column; }
+    .portfolio-thumb { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 8px; }
+    .cert-grid { align-items: stretch; }
+    .cert-card { display: flex; flex-direction: column; height: 100%; }
+    .cert-card img { aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: contain; background: #f4f7fb; padding: 14px; }
+    .cert-card .cert-info { flex: 1; display: flex; flex-direction: column; }
+    .cert-card .cert-info .cert-verify { margin-top: auto; align-self: flex-start; }
+    .info-box { height: 100%; }
+
   </style>
   <!-- If JS is disabled, show everything (no animation) -->
   <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}  </style></noscript>
@@ -966,7 +978,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">AI-Powered IDP System</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/idp.webp" class="img-fluid" alt="Intelligent Document Processing" style="width:300px;height:200px;object-fit:cover;" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/idp.webp" alt="Intelligent Document Processing" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Intelligent Document Processing</h4>
               <p style="color:#ccc;font-size:0.85rem;">OCR + LLM + rule-based validation for invoice automation</p>
@@ -979,7 +991,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">GraphRAG Enterprise Chatbot</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/nfu.webp" class="img-fluid" alt="GraphRAG Enterprise Chatbot" style="width:300px;height:200px;object-fit:cover;" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/nfu.webp" alt="GraphRAG Enterprise Chatbot" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">GraphRAG + Neo4j Chatbot</h4>
               <p style="color:#ccc;font-size:0.85rem;">Knowledge-graph retrieval &amp; multi-hop reasoning for a Fortune 500 client</p>
@@ -992,7 +1004,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Air Asia Ikhlas Chatbot</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/chatbot.webp" class="img-fluid" alt="Air Asia Chatbot" style="width:300px;height:200px;object-fit:cover;" width="900" height="600" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/chatbot.webp" alt="Air Asia Chatbot" width="900" height="600" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">LLM-Powered Production Chatbot</h4>
               <p style="color:#ccc;font-size:0.85rem;">MCP + LangChain + Gemini + Redis + Next.js</p>
@@ -1005,7 +1017,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
           <div class="text-center"><h4 aria-level="3">Wellness Chatbot with RAG</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/wellness.webp" class="img-fluid" alt="Wellness Chatbot" style="width:300px;height:200px;object-fit:cover;" onerror="this.src='assets/img/project/chatbot.webp'" width="900" height="481" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/wellness.webp" alt="Wellness Chatbot" onerror="this.src='assets/img/project/chatbot.webp'" width="900" height="481" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">LLM Powered Wellness Chatbot</h4>
               <p style="color:#ccc;font-size:0.85rem;">Personalized recommendations with RAG &amp; gamification</p>
@@ -1018,7 +1030,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Sustainable AI Agent</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/aiag.webp" class="img-fluid" alt="Sustainable AI Agent" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/aiag.webp" alt="Sustainable AI Agent" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Sustainable AI Agent</h4>
               <a href="projects/sustainable-ai-agent.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -1029,7 +1041,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Movie Recommendation</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/movier.webp" class="img-fluid" alt="Movie Recommendation" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/movier.webp" alt="Movie Recommendation" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Movie Recommendation</h4>
               <a href="projects/movie-recommendation.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -1040,7 +1052,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Health Risks Prediction</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/mental.webp" class="img-fluid" alt="Health Risks Prediction" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/mental.webp" alt="Health Risks Prediction" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Health Risks Prediction</h4>
               <a href="projects/health-risk-prediction.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -1051,7 +1063,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Customer Churn Analysis</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/churn.webp" class="img-fluid" alt="Customer Churn Analysis" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/churn.webp" alt="Customer Churn Analysis" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Customer Churn Analysis</h4>
               <a href="projects/customer-churn.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -1062,7 +1074,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Taiwan AQI Analysis</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/taiwan.webp" class="img-fluid" alt="Taiwan AQI Analysis" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/taiwan.webp" alt="Taiwan AQI Analysis" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Taiwan AQI Analysis</h4>
               <a href="projects/taiwan-aqi.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
@@ -1073,7 +1085,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Analyzing Hotel Booking</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/hotel.webp" class="img-fluid" alt="Hotel Booking Analysis" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="portfolio-thumb img-fluid" src="assets/img/project/hotel.webp" alt="Hotel Booking Analysis" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Analyzing Hotel Booking</h4>
               <a href="projects/hotel-booking.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
