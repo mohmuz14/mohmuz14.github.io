@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+.venv/
+__pycache__/
+
+# Build & local artifacts
+.cache/
+*.log
