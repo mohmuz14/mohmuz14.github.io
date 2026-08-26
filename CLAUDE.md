@@ -42,9 +42,20 @@ change is needed.
 
 - `assets/img/certification/azure.webp` is referenced but missing; the Azure
   certificate image needs to be supplied.
-- The CV is still hosted on Google Drive; self-hosting the PDF in the repo
-  would remove that external dependency.
-- Certificates other than the Claude one have no verification links.
-- All ten `projects/*.html` pages carry `TODO:` placeholders awaiting real
-  Problem / Approach / Results copy from the site owner. Do not invent this
-  content.
+- Certificates other than the Claude one have no verification links; add them
+  as `.cert-verify` anchors when the owner supplies the URLs.
+- Project pages 5-10 (sustainable-ai-agent, movie-recommendation,
+  health-risk-prediction, customer-churn, taiwan-aqi, hotel-booking) carry
+  descriptive copy written from their titles, not from source material. Pages
+  1-4 are grounded in the CV. Replace 5-10 with real detail when available --
+  and never add metrics that were not supplied.
+- The self-hosted CV at `assets/cv/` contains a phone number. `robots.txt`
+  disallows that path so it stays out of search indexes; keep that rule.
+
+## Layout rules
+
+Card grids must stay equal-height. Every grid uses `align-items: stretch`, its
+cards are flex columns, and every card image sits in a fixed `aspect-ratio` box
+with `object-fit`. Do not size images with inline pixel widths -- that is what
+made the Education row look staggered. Never leave two `class` attributes on one
+tag; the browser silently ignores the second.

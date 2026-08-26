@@ -633,6 +633,63 @@
       .edu-feature-photo img { max-height: 320px; }
     }
 
+    /* --- grid alignment: equal-height cards, uniform media boxes --- */
+    .portfolio-container { align-items: stretch; }
+    .portfolio-item { display: flex; flex-direction: column; margin-bottom: 26px; }
+    .portfolio-item > .portfolio-wrap { flex: 1; display: flex; flex-direction: column; }
+    .portfolio-thumb {
+      width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 8px;
+    }
+    .cert-grid { align-items: stretch; }
+    .cert-card { display: flex; flex-direction: column; height: 100%; }
+    .cert-card img {
+      aspect-ratio: 4 / 3; height: auto; width: 100%;
+      object-fit: contain; background: #f4f7fb; padding: 14px;
+    }
+    .cert-card .cert-info { flex: 1; display: flex; flex-direction: column; }
+    .cert-card .cert-info .cert-verify { margin-top: auto; align-self: flex-start; }
+    .info-box { height: 100%; }
+
+    /* --- motion & polish --- */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, #1c7d32, #12d640); z-index: 9999;
+      transition: width .12s linear; pointer-events: none;
+    }
+    .section-title h2 { position: relative; display: inline-block; }
+    .section-title h2::after {
+      content: ""; position: absolute; left: 0; bottom: -8px; height: 3px; width: 0;
+      background: #12d640; border-radius: 2px; transition: width .8s cubic-bezier(0.22,1,0.36,1) .15s;
+    }
+    .section-title.is-visible h2::after { width: 100%; }
+
+    .cert-card { transition: transform .3s ease, box-shadow .3s ease; }
+    .cert-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(0,0,0,0.35); }
+
+    .portfolio-thumb { transition: transform .5s cubic-bezier(0.22,1,0.36,1); }
+    .portfolio-wrap { overflow: hidden; border-radius: 8px; }
+    .portfolio-wrap:hover .portfolio-thumb { transform: scale(1.07); }
+
+    .tech-badge { transition: background .25s ease, color .25s ease, transform .25s ease; }
+    .tech-badge:hover { transform: translateY(-2px); }
+
+    #navMenu a { position: relative; }
+    #navMenu a::after {
+      content: ""; position: absolute; left: 0; bottom: -3px; height: 2px; width: 0;
+      background: #12d640; transition: width .28s ease;
+    }
+    #navMenu a:hover::after, #navMenu a.active::after { width: 100%; }
+
+    .btn, .btn-primary-x, .nav-cta, .cf-submit { transition: transform .22s ease, filter .22s ease, box-shadow .22s ease; }
+    .btn:hover, .btn-primary-x:hover, .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(18,214,64,0.22); }
+
+    .counting { font-variant-numeric: tabular-nums; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-progress { display: none; }
+      .section-title h2::after { width: 100%; transition: none; }
+    }
+
   </style>
   <!-- If JS is disabled, show everything (no animation) -->
   <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}  </style></noscript>
@@ -683,6 +740,7 @@
 
 <body>
   <a class="skip-link" href="#hero">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X"
@@ -1030,7 +1088,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">AI-Powered IDP System</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/idp.webp" class="img-fluid" alt="Intelligent Document Processing" style="width:300px;height:200px;object-fit:cover;" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/idp.webp" alt="Intelligent Document Processing" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Intelligent Document Processing</h4>
               <p style="color:#ccc;font-size:0.85rem;">OCR + LLM + rule-based validation for invoice automation</p>
@@ -1043,7 +1101,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">GraphRAG Enterprise Chatbot</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/nfu.webp" class="img-fluid" alt="GraphRAG Enterprise Chatbot" style="width:300px;height:200px;object-fit:cover;" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/nfu.webp" alt="GraphRAG Enterprise Chatbot" onerror="this.src='assets/img/project/aiag.webp'" width="900" height="600" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">GraphRAG + Neo4j Chatbot</h4>
               <p style="color:#ccc;font-size:0.85rem;">Knowledge-graph retrieval &amp; multi-hop reasoning for a Fortune 500 client</p>
@@ -1056,7 +1114,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Air Asia Ikhlas Chatbot</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/chatbot.webp" class="img-fluid" alt="Air Asia Chatbot" style="width:300px;height:200px;object-fit:cover;" width="900" height="600" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/chatbot.webp" alt="Air Asia Chatbot" width="900" height="600" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">LLM-Powered Production Chatbot</h4>
               <p style="color:#ccc;font-size:0.85rem;">MCP + LangChain + Gemini + Redis + Next.js</p>
@@ -1069,7 +1127,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-project">
           <div class="text-center"><h4 aria-level="3">Wellness Chatbot with RAG</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/wellness.webp" class="img-fluid" alt="Wellness Chatbot" style="width:300px;height:200px;object-fit:cover;" onerror="this.src='assets/img/project/chatbot.webp'" width="900" height="481" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/wellness.webp" alt="Wellness Chatbot" onerror="this.src='assets/img/project/chatbot.webp'" width="900" height="481" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">LLM Powered Wellness Chatbot</h4>
               <p style="color:#ccc;font-size:0.85rem;">Personalized recommendations with RAG &amp; gamification</p>
@@ -1082,67 +1140,79 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Sustainable AI Agent</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/aiag.webp" class="img-fluid" alt="Sustainable AI Agent" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/aiag.webp" alt="Sustainable AI Agent" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Sustainable AI Agent</h4>
+              <p style="color:#ccc;font-size:0.85rem;">Agentic workflow that plans and executes multi-step sustainability tasks</p>
               <a href="projects/sustainable-ai-agent.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
             </div></div>
           </div>
+          <div style="text-align:center;margin-top:8px;"><span class="tech-badge">Agentic AI</span><span class="tech-badge">LangGraph</span><span class="tech-badge">Python</span></div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Movie Recommendation</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/movier.webp" class="img-fluid" alt="Movie Recommendation" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/movier.webp" alt="Movie Recommendation" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Movie Recommendation</h4>
+              <p style="color:#ccc;font-size:0.85rem;">Collaborative and content-based recommender over film metadata</p>
               <a href="projects/movie-recommendation.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
             </div></div>
           </div>
+          <div style="text-align:center;margin-top:8px;"><span class="tech-badge">Python</span><span class="tech-badge">Scikit-learn</span><span class="tech-badge">NLP</span></div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Health Risks Prediction</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/mental.webp" class="img-fluid" alt="Health Risks Prediction" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/mental.webp" alt="Health Risks Prediction" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Health Risks Prediction</h4>
+              <p style="color:#ccc;font-size:0.85rem;">Classification models over health indicators for early risk flagging</p>
               <a href="projects/health-risk-prediction.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
             </div></div>
           </div>
+          <div style="text-align:center;margin-top:8px;"><span class="tech-badge">Python</span><span class="tech-badge">Scikit-learn</span><span class="tech-badge">Predictive Modeling</span></div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Customer Churn Analysis</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/churn.webp" class="img-fluid" alt="Customer Churn Analysis" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/churn.webp" alt="Customer Churn Analysis" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Customer Churn Analysis</h4>
+              <p style="color:#ccc;font-size:0.85rem;">End-to-end churn pipeline with the drivers surfaced for review</p>
               <a href="projects/customer-churn.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
             </div></div>
           </div>
+          <div style="text-align:center;margin-top:8px;"><span class="tech-badge">Python</span><span class="tech-badge">Scikit-learn</span><span class="tech-badge">Power BI</span></div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Taiwan AQI Analysis</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/taiwan.webp" class="img-fluid" alt="Taiwan AQI Analysis" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/taiwan.webp" alt="Taiwan AQI Analysis" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Taiwan AQI Analysis</h4>
+              <p style="color:#ccc;font-size:0.85rem;">Spatial and seasonal air-quality patterns across monitoring stations</p>
               <a href="projects/taiwan-aqi.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
             </div></div>
           </div>
+          <div style="text-align:center;margin-top:8px;"><span class="tech-badge">Python</span><span class="tech-badge">Pandas</span><span class="tech-badge">Data Viz</span></div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="text-center"><h4 aria-level="3">Analyzing Hotel Booking</h4></div>
           <div class="portfolio-wrap">
-            <img src="assets/img/project/hotel.webp" class="img-fluid" alt="Hotel Booking Analysis" style="width:300px;height:200px;object-fit:cover;" width="900" height="900" loading="lazy" decoding="async">
+            <img class="img-fluid portfolio-thumb" src="assets/img/project/hotel.webp" alt="Hotel Booking Analysis" width="900" height="900" loading="lazy" decoding="async">
             <div class="portfolio-info"><div class="portfolio-links">
               <h4 aria-level="3">Analyzing Hotel Booking</h4>
+              <p style="color:#ccc;font-size:0.85rem;">Guest profiles, seasonality and cancellation drivers for demand planning</p>
               <a href="projects/hotel-booking.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Project Details"><i class="bx bx-info-circle"></i></a>
             </div></div>
           </div>
+          <div style="text-align:center;margin-top:8px;"><span class="tech-badge">Python</span><span class="tech-badge">Pandas</span><span class="tech-badge">Data Viz</span></div>
         </div>
 
       </div>
@@ -1588,6 +1658,64 @@
           setStatus('Something went wrong. Please email mohmuzsha786@gmail.com directly.', 'err');
         }).then(function () { btn.disabled = false; });
       });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Scroll progress indicator
+      var bar = document.getElementById('scrollProgress');
+      if (bar && !reduce) {
+        var tick = function () {
+          var d = document.documentElement;
+          var max = d.scrollHeight - d.clientHeight;
+          bar.style.width = (max > 0 ? (d.scrollTop / max) * 100 : 0) + '%';
+        };
+        window.addEventListener('scroll', tick, { passive: true });
+        window.addEventListener('resize', tick);
+        tick();
+      }
+
+      // Reveal the underline under each section title
+      var titles = Array.prototype.slice.call(document.querySelectorAll('.section-title'));
+      // Count numeric stats up when they scroll into view
+      var nums = Array.prototype.slice.call(document.querySelectorAll('.hero-stats b, .stat-box .num'));
+
+      function countUp(el) {
+        var raw = el.textContent.trim();
+        var m = raw.match(/^([0-9]+(?:\.[0-9]+)?)(.*)$/);
+        if (!m) return;
+        var target = parseFloat(m[1]), suffix = m[2] || '';
+        var decimals = (m[1].split('.')[1] || '').length;
+        if (reduce) { el.textContent = target.toFixed(decimals) + suffix; return; }
+        el.classList.add('counting');
+        var start = null, dur = 1100;
+        function step(ts) {
+          if (start === null) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = (target * eased).toFixed(decimals) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            if (e.target.classList.contains('section-title')) e.target.classList.add('is-visible');
+            else countUp(e.target);
+            obs.unobserve(e.target);
+          });
+        }, { threshold: 0.4 });
+        titles.forEach(function (t) { io.observe(t); });
+        nums.forEach(function (n) { io.observe(n); });
+      } else {
+        titles.forEach(function (t) { t.classList.add('is-visible'); });
+      }
     })();
   </script>
 </body>
