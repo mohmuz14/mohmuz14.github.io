@@ -387,6 +387,14 @@
     .cert-card .cert-info { padding: 15px; }
     .cert-card .cert-info h4 { color: var(--ink); font-size: 1rem; font-weight: 600; margin-bottom: 5px; }
     .cert-card .cert-info p { color: #666; font-size: 0.85rem; margin-bottom: 0; }
+    .cert-card .cert-info .cert-verify {
+      display: inline-flex; align-items: center; gap: 5px; margin-top: 9px;
+      color: #1c7d32; font-size: 0.8rem; font-weight: 600; text-decoration: none;
+      border: 1px solid #1c7d32; border-radius: 20px; padding: 3px 12px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .cert-card .cert-info .cert-verify:hover { background: #1c7d32; color: #fff; }
+    .cert-card .cert-info .cert-verify i { font-size: 0.95rem; }
 
     .achievement-card {
       background: linear-gradient(135deg, #ffffff 0%, #e8f5ff 100%);
@@ -559,7 +567,7 @@
             and full MLOps, delivered with strong software-engineering rigor.
           </p>
           <div class="hero-stats">
-            <div><b>6+</b><span>Years in Tech</span></div>
+            <div><b>7+</b><span>Years in Tech</span></div>
             <div><b>3.98</b><span>Master's CGPA</span></div>
             <div><b>~80%</b><span>Effort Saved (IDP)</span></div>
             <div><b>10+</b><span>AI Projects</span></div>
@@ -629,7 +637,7 @@
           </div>
 
           <div class="stats-strip" style="margin-top: 18px;">
-            <div class="stat-box"><div class="num">6+</div><div class="lbl">Years Experience</div></div>
+            <div class="stat-box"><div class="num">7+</div><div class="lbl">Years Experience</div></div>
             <div class="stat-box"><div class="num">3.98</div><div class="lbl">Master's CGPA</div></div>
             <div class="stat-box"><div class="num">~80%</div><div class="lbl">Manual Effort Cut (IDP)</div></div>
             <div class="stat-box"><div class="num">10+</div><div class="lbl">AI / ML Projects</div></div>
@@ -782,15 +790,11 @@
 
         <div class="cert-card" data-aos="fade-up">
           <img src="assets/img/certification/claude.webp" alt="Claude Certified Developer - Foundations, issued by Anthropic" loading="lazy">
-          <div class="cert-info"><h4>Claude Certified Developer &ndash; Foundations</h4><p>Anthropic &middot; Aug 2026</p></div>
+          <div class="cert-info"><h4>Claude Certified Developer &ndash; Foundations</h4><p>Anthropic &middot; Aug 2026</p><a class="cert-verify" href="https://www.credly.com/badges/62902d20-b212-449f-8386-1b37bbfc1423" target="_blank" rel="noopener noreferrer"><i class="bx bx-shield-check"></i> Verify on Credly</a></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
           <img src="assets/img/certification/gcp.webp" alt="Google Cloud Data Analytics">
           <div class="cert-info"><h4>Google Cloud Data Analytics</h4><p>Google Cloud Career Launchpad · Jan 2025</p></div>
-        </div>
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
-          <img src="assets/img/certification/azure.webp" alt="Microsoft Azure Fundamentals" loading="lazy">
-          <div class="cert-info"><h4>Microsoft Certified: Azure Fundamentals</h4><p>Microsoft · 2024</p></div>
         </div>
         <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
           <img src="assets/img/certification/AWS_Certification.webp" alt="AWS Generative AI Practitioner" loading="lazy">
