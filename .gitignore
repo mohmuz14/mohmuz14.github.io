@@ -25,3 +25,6 @@ __pycache__/
 # Build & local artifacts
 .cache/
 *.log
+
+# Local AI-assistant working notes (kept out of the repo)
+CLAUDE.md
